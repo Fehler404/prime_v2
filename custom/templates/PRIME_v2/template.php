@@ -14,20 +14,20 @@ $nl_template_version = '2.0.0-pr1'; // Nameless version template is designed for
 
 // Paths to CSS files
 $css = array(
-	(defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/PRIME_v2/css/bootstrap.min.css',
+	(defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/Prime_v2/css/bootstrap.min.css',
 	(defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/core/assets/css/custom.css',
 	(defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/core/assets/css/font-awesome.min.css',
-	(defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/PRIME_v2/css/custom.css'
+	(defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/Prime_v2/css/custom.css'
 );
 
 $js_sources = array(
-	(defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/PRIME_v2/js/jquery.min.js',
-	(defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/PRIME_v2/js/tether.min.js',
-	(defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/PRIME_v2/js/bootstrap.min.js'
+	(defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/Prime_v2/js/jquery.min.js',
+	(defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/Prime_v2/js/tether.min.js',
+	(defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/Prime_v2/js/bootstrap.min.js'
 );
 
 if(defined('PAGE') && PAGE == 'cc_messaging'){
-	$js_sources[] = (defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/PRIME_v2/js/bootstrap3-typeahead.min.js';
+	$js_sources[] = (defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/Prime_v2/js/bootstrap3-typeahead.min.js';
 }
 
 // Page load time

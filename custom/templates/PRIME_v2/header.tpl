@@ -1,8 +1,10 @@
-<header class="global-header">
-  <div class="container">
-	<center>
-	  <img src="/custom/templates/Red/img/basic_world.png" height="100px" width="100px"/>
-	</center>
-  </div>
-</header>
-<br />
+   <section id="intro">
+    <div class="content">
+    <div class="container">
+       <div class="col-md-12 col-sm-12">
+            <h1 class="animated wow fadeInDown" data-wow-delay=".5s"><a href="/">{SITE_NAME}</a></h1>
+        </div>
+      </div>
+
+       </div>
+   </section>

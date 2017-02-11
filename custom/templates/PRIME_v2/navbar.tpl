@@ -1,11 +1,10 @@
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-static-top navbar-default">
   <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar">
 	&#9776;
   </button>
   <div class="collapse navbar-toggleable-xs" id="navbar">
 	<div class="container">
 	  <ul class="nav navbar-nav">
-	    <a class="navbar-brand" href="/">{$SITE_NAME}</a>
  	    {foreach from=$NAV_LINKS key=name item=item}
 		  {if isset($item.items)}
 		    {* Dropdown *}
@@ -20,8 +19,8 @@
 			</li>
 		  {else}
 		    {* Normal link *}
-			<li class="nav-item{if isset($item.active)} active{/if}">
-			  <a class="nav-link{if isset($item.active)} white-text{/if}" href="{$item.link}" target="{$item.target}">{$item.title}</a></li>
+			<li class="nav-item">
+			  <a class="nav-link" href="{$item.link}" target="{$item.target}">{$item.title}</a></li>
 		  {/if}
 		{/foreach}
 	  </ul>

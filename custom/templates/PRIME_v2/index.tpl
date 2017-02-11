@@ -1,18 +1,6 @@
-<section id="intro">
-    <div class="content">
-        <div class="container">
-            <div class="row">
-            <div class="col-md-12 col-sm-12">
-            <h1><a href="/">{$SITE_NAME}</a></h1>
-            <br>
-              <p>There are currently <strong>0</strong> players online.</p>
-              <p>Connect now using the IP <strong>s</strong></p>
-            </div>
-            </div>
-     </div>
-    </div>
-</section>
-    {include file='navbar.tpl'}
+{include file='header.tpl'}
+{include file='navbar.tpl'}
+
 <div class="home-news">
   <div class="container">
     <br />
@@ -20,7 +8,7 @@
 	
 	  {if isset($NEWS)}
 	  <div class="col-md-8">
-	    <center><h2>{$LATEST_ANNOUNCEMENTS} <i class="fa fa-bullhorn"></i></h2></center>
+	    <center><h2>{$LATEST_ANNOUNCEMENTS}</h2></center>
 		<hr />
 		{foreach from=$NEWS item=item}
 		<div class="card">
@@ -43,7 +31,7 @@
 	  <div class="col-md-4 offset-md-4">
 	  {/if}
 	  
-	    <center><h2>{$SOCIAL} <i class="fa fa-users" aria-hidden="true"></i></h2></center>
+	    <center><h2>{$SOCIAL}</h2></center>
 	    <hr />
 		{if $TWITTER}
 	    <div class="card">
