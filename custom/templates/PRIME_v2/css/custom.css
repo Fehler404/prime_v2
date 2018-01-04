@@ -110,6 +110,10 @@
 .jumbotron h1 {
 	color: #fff;
 }
+.jumbotron hr {
+	width: 30%;
+	border: 1px solid #fff;
+}
 
 /* navigation section */
 .navbar-default {
