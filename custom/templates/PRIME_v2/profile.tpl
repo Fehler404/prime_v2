@@ -1,22 +1,23 @@
 {include file='navbar.tpl'}
 
-<div class="container" style="padding-top: 5rem;">
+<div class="container">
   <div class="jumbotron" style="background-image:url('{$BANNER}');">
 	<div class="row">
 	  <div class="col-md-8">
 		<h2>
-		  <img class="img-rounded" style="height:60px;width=60px;" src="{$AVATAR}" />
+		  <img class="rounded" style="height:60px;width=60px;" src="{$AVATAR}" />
 		  <strong{if $USERNAME_COLOUR != false} style="{$USERNAME_COLOUR}"{/if}>{$NICKNAME}</strong> 
 		  {$GROUP}
 		</h2>
 	  </div>
 	  <div class="col-md-4">
-		<div class="pull-xs-right">
+		<span class="pull-right">
 		  {nocache}
 		  {if isset($LOGGED_IN)}
 		    {if !isset($SELF)}
 		  <div class="btn-group">
 			<!--<a href="{$FOLLOW_LINK}" class="btn btn-primary btn-lg"><i class="fa fa-users fa-fw"></i> {$FOLLOW}</a>-->
+			{if $MOD_OR_ADMIN ne true}<a href="#" data-toggle="modal" data-target="#blockModal" class="btn btn-danger btn-lg"><i class="fa fa-ban fa-fw"></i></a>{/if}
 			<a href="{$MESSAGE_LINK}" class="btn btn-secondary btn-lg"><i class="fa fa-envelope fa-fw"></i></a>
 		  </div>
 		    {else}
@@ -27,11 +28,15 @@
 		    {/if}
 		  {/if}
 		  {/nocache}
-		</div>
+		</span>
 	  </div>
 	</div>
   </div>
 
+  {if !empty($WIDGETS)}
+  <div class="row">
+    <div class="col-md-8">
+  {/if}
   <div class="card">
     <div class="card-block">
 	  <ul class="nav nav-tabs">
@@ -58,6 +63,11 @@
 			  {$ERROR}
 			</div>
 			{/if}
+            {if isset($SUCCESS)}
+			<div class="alert alert-success">
+			  {$SUCCESS}
+			</div>
+			{/if}
 		  <form action="" method="post">
 			<div class="form-group">
 			  <textarea name="post" class="form-control" placeholder="{$POST_ON_WALL}"></textarea>
@@ -78,7 +88,7 @@
 
 			<article class="panel panel-primary">
 			  <div class="panel-heading icon">
-				<img class="img-circle" style="height:40px; width=40px;" src="{$post.avatar}" />
+				<img class="rounded-circle" style="height:40px; width=40px;" src="{$post.avatar}" />
 			  </div>
 
 			  <div class="panel-heading">
@@ -93,10 +103,48 @@
 			  </div>
 
 			  <div class="panel-footer">
-				<a href="{if $post.reactions_link ne "#"}{$post.reactions_link}{else}#{/if}" class="pop" data-content='{if isset($post.reactions.reactions)} {foreach from=$post.reactions.reactions item=reaction name=reactions}<a href="{$reaction.profile}" style="{$reaction.style}"><img class="img-rounded" src="{$reaction.avatar}" alt="{$reaction.username}" style="max-height:30px; max-width:30px;" /> {$reaction.nickname}</a>{if !$smarty.foreach.reactions.last}<br />{/if}{/foreach} {else}{$post.reactions.count}{/if}'><i class="fa fa-thumbs-up"></i> {$post.reactions.count} </a> | <a href="#" data-toggle="modal" data-target="#replyModal{$post.id}"><i class="fa fa-comments"></i> {$post.replies.count}</a>
+				<a href="{if $post.reactions_link ne "#"}{$post.reactions_link}{else}#{/if}" class="pop" data-content='{if isset($post.reactions.reactions)} {foreach from=$post.reactions.reactions item=reaction name=reactions}<a href="{$reaction.profile}" style="{$reaction.style}"><img class="rounded" src="{$reaction.avatar}" alt="{$reaction.username}" style="max-height:30px; max-width:30px;" /> {$reaction.nickname}</a>{if !$smarty.foreach.reactions.last}<br />{/if}{/foreach} {else}{$post.reactions.count}{/if}'><i class="fa fa-thumbs-up"></i> {$post.reactions.count} </a> | <a href="#" data-toggle="modal" data-target="#replyModal{$post.id}"><i class="fa fa-comments"></i> {$post.replies.count}</a>
+				<span class="pull-right">
+				  {if (isset($CAN_MODERATE) && $CAN_MODERATE eq 1) || $post.self eq 1}
+				    <form action="" method="post" id="delete{$post.id}">
+					  <input type="hidden" name="post_id" value="{$post.id}">
+					  <input type="hidden" name="action" value="delete">
+				      <input type="hidden" name="token" value="{$TOKEN}">
+					</form>
+					<a href="#" data-toggle="modal" data-target="#editModal{$post.id}">{$EDIT}</a> | <a href="#" onclick="deletePost({$post.id})">{$DELETE}</a>
+				  {/if}
+				</span>
 			  </div>
 
 			</article>
+
+			{if (isset($CAN_MODERATE) && $CAN_MODERATE eq 1) || $post.self eq 1}
+				<!-- Post editing modal -->
+				<div class="modal fade" id="editModal{$post.id}" tabindex="-1" role="dialog" aria-labelledby="editModal{$post.id}Label" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<form action="" method="post">
+								  <div class="form-group">
+									<textarea class="form-control" name="content">{$post.content}</textarea>
+								  </div>
+								  <div class="form-group">
+									<input type="hidden" name="token" value="{$TOKEN}">
+									<input type="hidden" name="post_id" value="{$post.id}">
+									<input type="hidden" name="action" value="edit">
+									<input type="submit" class="btn btn-primary" value="{$SUBMIT}">
+								  </div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			{/if}
 
 			{if $post.reactions_link ne "#"}
 			<!-- Reaction modal -->
@@ -133,7 +181,7 @@
 				  <div class="modal-body">
 				    {if isset($post.replies.replies)}
 					  {foreach from=$post.replies.replies name=replies item=reply}
-					  <img src="{$reply.avatar}" alt="{$reply.username}" style="max-height:20px; max-width:20px;" class="img-rounded" /> <a href="{$reply.profile}" style="{$reply.style}">{$reply.nickname}</a> &raquo;
+					  <img src="{$reply.avatar}" alt="{$reply.username}" style="max-height:20px; max-width:20px;" class="rounded" /> <a href="{$reply.profile}" style="{$reply.style}">{$reply.nickname}</a> &raquo;
 					  <span class="pull-right">
 					    <span rel="tooltip" title="{$reply.time_full}">{$reply.time_friendly}</span>
 					  </span>
@@ -141,6 +189,14 @@
 					  <div class="forum_post">
 					    {$reply.content}
 					  </div>
+                      {if (isset($CAN_MODERATE) && $CAN_MODERATE eq 1) || $reply.self eq 1}
+						<form action="" method="post" id="deleteReply{$reply.id}">
+						  <input type="hidden" name="action" value="deleteReply">
+						  <input type="hidden" name="token" value="{$TOKEN}">
+						  <input type="hidden" name="post_id" value="{$reply.id}">
+						</form>
+						<br /><a href="#" onclick="deleteReply({$reply.id})">{$DELETE}</a>
+					  {/if}
 					  {if !$smarty.foreach.replies.last}<hr />{/if}
 					  {/foreach}
 					{else}
@@ -184,7 +240,7 @@
 			    <div class="card-block">
 				  {if isset($ABOUT_FIELDS.minecraft)}
 				    <center>
-					  <img src="{$ABOUT_FIELDS.minecraft.image}" alt="{$USERNAME}" class="img-rounded" />
+					  <img src="{$ABOUT_FIELDS.minecraft.image}" alt="{$USERNAME}" class="rounded" />
 					  <h2{if $USERNAME_COLOUR != false} style="{$USERNAME_COLOUR}"{/if}>{$NICKNAME}</h2>
 					  {$USER_TITLE}
 					</center>
@@ -226,6 +282,15 @@
 	  </div>
     </div>
   </div>
+  {if !empty($WIDGETS)}
+  </div>
+  <div class="col-md-4">
+  {foreach from=$WIDGETS item=widget}
+    {$widget}<br /><br />
+  {/foreach}
+  </div>
+  </div>
+  {/if}
 </div>
 
 {if isset($LOGGED_IN)}
@@ -258,7 +323,51 @@
 		</div>
 	  </div>
 	</div>
+  {else}
+	{if $MOD_OR_ADMIN ne true}
+	<!-- Block user modal -->
+	<div class="modal fade" id="blockModal" tabindex="-1" role="dialog" aria-labelledby="blockModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+			<h4 class="modal-title" id="blockModalLabel">{if isset($BLOCK_USER)}{$BLOCK_USER}{else}{$UNBLOCK_USER}{/if}</h4>
+		  </div>
+		  <form action="" method="post" style="display:inline;" >
+		    <div class="modal-body">
+			  <p>{if isset($CONFIRM_BLOCK_USER)}{$CONFIRM_BLOCK_USER}{else}{$CONFIRM_UNBLOCK_USER}{/if}</p>
+			  <input type="hidden" name="token" value="{$TOKEN}">
+			  <input type="hidden" name="action" value="block">
+		    </div>
+		    <div class="modal-footer">
+			  <button type="button" class="btn btn-danger" data-dismiss="modal">{$CANCEL}</button>
+			  <input type="submit" class="btn btn-primary" value="{$CONFIRM}">
+		    </div>
+		  </form>
+		</div>
+	  </div>
+	</div>
+	{/if}
   {/if}
 {/if}
 
 {include file='footer.tpl'}
+
+{if isset($LOGGED_IN)}
+  <script type="text/javascript">
+    function deletePost(post) {
+	    if(confirm("{$CONFIRM_DELETE}")){
+	        document.getElementById("delete" + post).submit();
+        }
+    }
+  </script>
+  <script type="text/javascript">
+    function deleteReply(post) {
+    	if(confirm("{$CONFIRM_DELETE}")){
+    		document.getElementById("deleteReply" + post).submit();
+    	}
+    }
+  </script>
+{/if}

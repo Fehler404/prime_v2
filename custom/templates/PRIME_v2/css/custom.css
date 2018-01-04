@@ -4,7 +4,7 @@
     URL: https://jonafeucht.de
     AUTHOR: Jona Feucht
 
-    
+
 */
 @import url('https://fonts.googleapis.com/css?family=Raleway|Open+Sans|Montserrat');
 
@@ -107,26 +107,8 @@
 	color: red;
 }
 
-#intro {
-    height: 220px;
-	background-color: #f2f2f2;
-    background:
-   linear-gradient(
-   rgba(0, 0, 0, 0.51),rgba(0, 0, 0, 0.42)),
-	url('../img/bg.jpg');
-    background-attachment: scroll;
-    background-size: cover;
-    background-position: center center;
-    clear: both;
-    width: 100%;
-    padding: 0 7%;
-    display: table;
-    margin: 0;
-    max-width: none;
-}
-.content {
-    display: table-cell;
-    vertical-align: middle;
+.jumbotron h1 {
+	color: #fff;
 }
 
 /* navigation section */

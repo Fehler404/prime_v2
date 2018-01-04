@@ -1,10 +1,11 @@
-<nav class="navbar navbar-static-top navbar-default">
-  <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar">
-	&#9776;
+<nav class="navbar navbar-toggleable-md fixed-top navbar-inverse bg-primary">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-toggleable-xs" id="navbar">
-	<div class="container">
-	  <ul class="nav navbar-nav">
+  <div class="container">
+   <a class="navbar-brand" href="/">{$SITE_NAME}</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	  <ul class="navbar-nav mr-auto">
  	    {foreach from=$NAV_LINKS key=name item=item}
 		  {if isset($item.items)}
 		    {* Dropdown *}
@@ -19,13 +20,13 @@
 			</li>
 		  {else}
 		    {* Normal link *}
-			<li class="nav-item">
-			  <a class="nav-link" href="{$item.link}" target="{$item.target}">{$item.title}</a></li>
+			<li class="nav-item{if isset($item.active)} active{/if}">
+			  <a class="nav-link{if isset($item.active)} white-text{/if}" href="{$item.link}" target="{$item.target}">{$item.title}</a></li>
 		  {/if}
 		{/foreach}
 	  </ul>
 	
-	  <ul class="nav navbar-nav pull-xs-right">
+	  <ul class="nav navbar-nav">
 	    {if isset($MESSAGING_LINK)}
 	    {* Private messages and alerts *}
 		<li class="nav-item dropdown pm-dropdown">
@@ -52,7 +53,7 @@
 			{* Dropdown *}
 			<li class="nav-item dropdown">
 			  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{$item.title}</a>
-			  <div class="dropdown-menu">
+			  <div class="dropdown-menu dropdown-menu-right">
 				{foreach from=$item.items item=dropdown}
 				  {if isset($dropdown.separator)}
 				    <div class="dropdown-divider"></div>
@@ -70,6 +71,18 @@
 		  {/if}
 		{/foreach}
 	  </ul>
-	</div>
+    </div>
   </div>
 </nav>
+
+<div class="container" style="padding-top: 5rem;">
+  {* Global messages *}
+  {if isset($MAINTENANCE_ENABLED)}
+  <div class="alert alert-danger alert-dismissible" role="alert">
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+	  </button>
+	  {$MAINTENANCE_ENABLED}
+  </div>
+  {/if}
+</div>
