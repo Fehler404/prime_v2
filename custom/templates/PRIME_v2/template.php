@@ -6,7 +6,7 @@
  *
  *  License: MIT
  *
- *  Default template
+ *  Prime_v2
  */
 
 $template_version = 'v2.0.0-pr3'; // Version number of template
