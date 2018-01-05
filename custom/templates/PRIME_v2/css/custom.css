@@ -6,8 +6,16 @@
 
 
 */
-@import url('https://fonts.googleapis.com/css?family=Raleway|Open+Sans|Montserrat');
-
+@import url('https://fonts.googleapis.com/css?family=Raleway|Open+Sans|Montserrat|Roboto');
+body {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    font-size: 13px;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    color: rgb(55, 71, 79);
+    word-wrap: break-word;
+    line-height: 1.28;
+}
 .bg-danger {
 	background-color: #C9001D !important;
 }
@@ -61,7 +69,7 @@
 }
 
 .white-text {
-	color: #fff !important;
+	color: rgb(33, 150, 243)!important;
 }
 
 /*
@@ -116,94 +124,65 @@
 }
 
 /* navigation section */
-.navbar-default {
-	background: #2A7BA1;
+.bg-primary {
+	background: #fff;
 	border: none;
-    border-radius: 0;
-    border-color: transparent;
+  border-radius: 0;
+  border-color: transparent;
 	box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.03);
-	margin: 0 !important;
+	height:75px;
 }
-.navbar-default img {
-    vertical-align: middle;
-    margin-top: 4px;
+.navbar-inverse .navbar-nav .nav-link {
+	text-transform: uppercase;
+	font-size: 14px;
+	color: rgb(84, 110, 122);
+	line-height: 20px;
 }
-.navbar-default .navbar-nav .dropdown-menu a {
-	color: #333;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 300;
-	outline: none;
-    font-size: 13px;
-    text-transform: uppercase;
-	line-height: 40px;
+.navbar-inverse .navbar-nav .nav-link:hover {
+	text-transform: uppercase;
+	font-size: 14px;
+	color: rgb(33, 150, 243);
 }
-.navbar-default .navbar-nav li a {
-	color: #fff;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 300;
-	outline: none;
-    font-size: 13px;
-    text-transform: uppercase;
-	line-height: 40px;
+.navbar-inverse .navbar-nav .nav-link:focus {
+	text-transform: uppercase;
+	font-size: 14px;
+	color: rgb(33, 150, 243);
 }
-.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
-	color: #fff;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 300;
-	outline: none;
-    font-size: 13px;
-	line-height: 40px;
+.navbar-nav .pm-dropdown .dropdown-menu {
+	background-color: #FFFFFF;
+	font-size: 13px;
+	background-color: rgb(245, 245, 245);
+	border-radius: 2px;
+	overflow: hidden;
+	box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
+	transition: height .2s ease-in-out;
+	min-width: 200px;
+	*width: 200px;
+	position: absolute;
 }
-.navbar-default .navbar-nav > .active > a {
-	color: #333;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 300;
-	outline: none;
-    font-size: 13px;
-	padding-right: 15px;
-	padding-left: 20px;
-	line-height: 40px;
+.navbar-nav .alert-dropdown .dropdown-menu {
+	background-color: #FFFFFF;
+	font-size: 13px;
+	background-color: rgb(245, 245, 245);
+	border-radius: 2px;
+	overflow: hidden;
+	box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
+	transition: height .2s ease-in-out;
+	min-width: 200px;
+	*width: 200px;
+	position: absolute;
 }
-.navbar-default .navbar-toggle {
-	border: none;
-	padding-top: 12px;
-}
-.navbar-default .navbar-toggle .icon-bar {
-	background: #333;
-	border-color: transparent;
-}
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-	background-color: transparent;
-    cursor: crosshair;
-}
-.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #333;
-    text-align: center;
-	letter-spacing: 1px;
-}
-.navbar-brand {
-    margin-right: -15px;
-}
-.navbar-brand a {
-	color: #333;
-	font-weight: 200;
-	outline: none;
-    font-size: 24px;
-	padding-right: 15px;
-	padding-left: 20px;
-    line-height: 35px;
-}
-.navbar-default .navbar-nav .dropdown-menu li a {
-    color: #696969;
-    background: #fff;
-    text-transform: uppercase;
-    text-align: left;
-    border-top: 0;
-}
-.navbar-default .navbar-nav .dropdown-menu li a:hover {
-    color: #2A7BA1;
-    background: #fff;
-    text-transform: uppercase;
+.navbar-nav .dropdown-menu-right {
+	background-color: #FFFFFF;
+	font-size: 13px;
+	background-color: rgb(245, 245, 245);
+	border-radius: 2px;
+	overflow: hidden;
+	box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
+	transition: height .2s ease-in-out;
+	min-width: 200px;
+	*width: 200px;
+	position: absolute;
 }
 /* Credit to bootsnipp.com for the css for the color graph */
 .colorgraph {
