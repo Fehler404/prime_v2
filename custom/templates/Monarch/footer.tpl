@@ -13,27 +13,27 @@
                             <i class="fa fa-microphone"></i>
                         </div><!--//icon-holder-->
                         <h4 class="title">Teamspeak</h4>
-                        <div class="email"><a target="_blank" href="ts3server://neruxvace.net">neruxvace.net</a></div>
+                        <div class="email"><a target="_blank" href="ts3server://#">example.com</a></div>
                     </div><!--//item-inner-->
                 </div><!--//item-->
-				
+
                 <div class="item col-xs-12 col-md-4">
                     <div class="item-inner">
                         <div class="icon-holder">
                             <i class="fa fa-envelope"></i>
                         </div><!--//icon-holder-->
-                        <h4 class="title">Ticket-Support</h4>
-                        <div class="email"><a href="https://forum.neruxvace.net/pages/support/">Support-Formular</a></div>
+                        <h4 class="title">Support</h4>
+                        <div class="email"><a href="#">Support</a></div>
                     </div><!--//item-inner-->
                 </div><!--//item-->
-				
+
                 <div class="item col-xs-12 col-md-4">
                     <div class="item-inner">
                         <div class="icon-holder">
                             <i class="fa fa-headphones"></i>
                         </div><!--//icon-holder-->
                         <h4 class="title">Discord</h4>
-                        <div class="email"><a target="_blank" href="https://nerux.link/dc">36HN5Yb</a></div>
+                        <div class="email"><a target="_blank" href="#">example</a></div>
                     </div><!--//item-inner-->
                 </div><!--//item-->
 
@@ -42,9 +42,9 @@
         </div><!--//contact-list-->
         <div class="social-media-block">
             <ul class="list-inline social-media-list">
-			<span class="item">&copy; {$SITE_NAME} {'Y'|date}</span>
-              {foreach from=$SOCIAL_MEDIA_ICONS item=icon}
-				<li><a class="item" href="{$icon.link}">{$icon.text}</a></li>
+			<span class="item">&copy; {$SITE_NAME} {'Y'|date}</span><br>
+        {foreach from=$SOCIAL_MEDIA_ICONS item=icon}
+				<a href="{$icon.link}" target="_blank"><i id="social-{$icon.short}" class="{if $icon.long neq 'envelope'}fab{else}fas{/if} fa-{$icon.long}-square fa-3x social"></i></a>
 			  {/foreach}
             </ul>
         </div><!--//social-media-block-->
@@ -84,11 +84,11 @@
     {$script}
   {/foreach}
   <script src="{$TEMPLATE.path}/js/bootstrap.min.js"></script>
-  
+
   {if isset($NEW_UPDATE) && ($NEW_UPDATE_URGENT != true)}
     <script src="{$TEMPLATE.path}/js/core/update.js"></script>
   {/if}
-  
+
 </body>
 
 </html>

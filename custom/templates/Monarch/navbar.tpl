@@ -4,7 +4,7 @@
     <div class="ui stackable grid">
       <div class="ui middle aligned row">
         <div class="eight wide column">
-          <h1>{$SITE_NAME}</h1>
+          <a href="{$SITE_HOME}"><h1 style="color:#fff;">{$SITE_NAME}</h1></a>
         </div>
         <div class="eight wide column">
           {if isset($MINECRAFT)}
@@ -32,7 +32,7 @@
     </div>
     </div>
   </div>
-     
+
 
 <div class="ui vertical inverted sidebar menu left" id="toc">
   <div class="item"><h3>{$SITE_NAME}</h3></div>
@@ -126,7 +126,7 @@
       </div>
     </div>
   </div>
-  
+
     <div class="ui container intro">
 	    {if isset($NEW_UPDATE)}
       {if $NEW_UPDATE_URGENT eq true}
