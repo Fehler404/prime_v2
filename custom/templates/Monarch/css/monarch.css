@@ -1,0 +1,117 @@
+.ui.container.intro {margin-top:20px !important;}
+
+/* ======= Generic section styling ======= */
+.section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.section-title {
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 60px;
+  font-weight: 800;
+  font-size: 32px;
+  position: relative;
+  padding-bottom: 5px;
+}
+.section-title:after {
+  content: "";
+  display: inline-block;
+  height: 4px;
+  width: 60px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  margin-left: -30px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.text-center {
+    text-align: center;
+}
+
+/* ======= Contact Section ======= */
+.contact-section {
+  background: linear-gradient(90deg, rgba(17,146,210,1) 0%, rgba(100,255,229,1) 100%);
+  color: rgba(255, 255, 255, 0.75);
+}
+.contact-section a {
+  color: rgba(255, 255, 255, 0.75);
+}
+.contact-section a:hover {
+  color: #fff;
+}
+.contact-section .section-title {
+  margin-bottom: 30px;
+  color: #fff;
+}
+.contact-section .section-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  font-size: 16px;
+}
+.contact-section .contact-block .item {
+  margin-bottom: 30px;
+}
+.contact-section .contact-block .title {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.contact-section .contact-block .icon-holder {
+  margin-bottom: 15px;
+}
+.contact-section .contact-block .fa {
+  margin-right: 5px;
+  color: #fff;
+  font-size: 24px;
+}
+.contact-section .channels-list {
+  margin-bottom: 45px;
+}
+.contact-section .channels-list li {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.contact-section .channels-list li:last-child {
+  margin-right: 0;
+}
+.contact-section .channels-list a {
+  -webkit-opacity: 0.4;
+  -moz-opacity: 0.4;
+  opacity: 0.4;
+}
+.contact-section .channels-list a:hover {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.contact-section .social-media-list {
+  margin-bottom: 0;
+}
+.contact-section .social-media-list a {
+  color: rgba(255, 255, 255, 0.4);
+}
+.contact-section .social-media-list a:hover {
+  color: #fff;
+}
+.contact-section .social-media-list li {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.contact-section .social-media-list li:last-child {
+  margin-right: 0;
+}
+.contact-section .social-media-list .fa {
+  font-size: 36px;
+}
