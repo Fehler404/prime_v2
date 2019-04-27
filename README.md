@@ -1,11 +1,11 @@
-## PRIME Theme for NamelessMC (v2)
+## MONARCH Template for NamelessMC (v2)
 
 How to install:
 
     Upload to Main Directory.
     Login to AdminCP.
     Go to Styles.
-    Click "Install" > Find "PRIME" and Activate.
+    Click "Install" > Find "Monarch" and Activate.
 
 That's it.
 
@@ -19,5 +19,5 @@ You're not allowed to:
 ```
 custom/
 ├── templates/
-│   ├── PRIME_v2/
+│   ├── Monarch/
 ```
