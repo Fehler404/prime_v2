@@ -142,14 +142,15 @@
 }
 #news-post .description {padding: 10px 20px;}
 
-.intro .top-text h2 {
+.top-text h2 {
 	text-transform: uppercase;
 	font-family: "Montserrat",sans-serif;
 	font-weight: 500;
 }
-#intro .top-text hr {
-	width: 20px;
+.top-text hr {
+	width: 40px;
 	border: 2px solid #111;
+	margin-bottom: 35px;
 }
 /* ======= Generic section styling ======= */
 .section {
