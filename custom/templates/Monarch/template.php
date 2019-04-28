@@ -1,6 +1,7 @@
 <?php
 /*
- *	Made by Samerton | Template by Spiele
+ *	Made by Samerton | Revamped by Xemah
+ *	Template by Spiele
  *	https://github.com/NamelessMC/Nameless/
  *	NamelessMC version 2.0.0-pr6
  *
@@ -10,18 +11,18 @@
 
 class Monarch_Template extends TemplateBase {
 	private $_language, $_user, $_pages, $_template;
-	
+
 	public function __construct($cache, $smarty, $language, $user, $pages) {
-		
+
 		$template = array(
 			'name' => 'Monarch',
 			'version' => '2.0.0-pr6',
 			'nl_version' => "2.0.0-pr6",
 			'author' => '<a href="https://www.spigotmc.org/members/spiele.25346/" target="_blank">Spiele</a>',
 		);
-		
+
 		$template['path'] = (defined('CONFIG_PATH') ? CONFIG_PATH : '') . '/custom/templates/' . $template['name'] . '/';
-		
+
 		parent::__construct($template['name'], $template['version'], $template['nl_version'], $template['author']);
 
 		$this->addCSSFiles(array(
@@ -29,31 +30,31 @@ class Monarch_Template extends TemplateBase {
 			$template['path'] . 'css/toastr.min.css' => array(),
 			'https://use.fontawesome.com/releases/v5.7.2/css/all.css' => array('integrity' => 'sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr', 'crossorigin' => 'anonymous')
 		));
-		
+
 		$this->addJSFiles(array(
 			$template['path'] . 'js/jquery.min.js' => array(),
 			$template['path'] . 'js/jquery.cookie.js' => array(),
 			$template['path'] . 'js/semantic.min.js' => array(),
 			$template['path'] . 'js/toastr.min.js' => array(),
 		));
-		
+
 		$smarty->assign('TEMPLATE', $template);
 
 		// Other variables
 		$smarty->assign('FORUM_SPAM_WARNING_TITLE', $language->get('general', 'warning'));
-		
+
 		$this->_template = $template;
 		$this->_language = $language;
 		$this->_user = $user;
 		$this->_pages = $pages;
 	}
-	
+
 	public function onPageLoad() {
-		
+
 		$this->addCSSFiles(array(
 		    $this->_template['path'] . 'css/custom.css' => array()
 		));
-	    
+
 	    $route = (isset($_GET['route']) ? rtrim($_GET['route'], '/') : '/');
 
 		$JSVariables = array(
@@ -80,7 +81,7 @@ class Monarch_Template extends TemplateBase {
 		    'loadingTime' => ((defined('PAGE_LOADING') && PAGE_LOADING == 1) ? PAGE_LOAD_TIME : ''),
 		    'route' => $route
 		);
-		
+
 	    if (strpos($route, '/forum/topic/') !== false) {
 			$this->addJSFiles(array(
 			    $this->_template['path'] . 'js/jquery-ui.min.js' => array()
@@ -93,16 +94,16 @@ class Monarch_Template extends TemplateBase {
 		    $JSVars .= ($i == 0 ? 'var ' : ', ') . $var . ' = \'' . $value . '\'';
 		    $i++;
 		}
-		
+
 		$this->addJSScript($JSVars);
-		
+
 		$this->addJSFiles(array(
 			$this->_template['path'] . 'js/core/core.js' => array(),
 			$this->_template['path'] . 'js/core/user.js' => array(),
 			$this->_template['path'] . 'js/core/pages.js' => array(),
 			$this->_template['path'] . 'js/scripts.js' => array(),
 		));
-		
+
 		foreach($this->_pages->getAjaxScripts() as $script)
 		    $this->addJSScript('$.getJSON(\'' . $script . '\', function(data) {});');
 	}
