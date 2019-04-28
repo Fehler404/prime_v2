@@ -154,8 +154,8 @@
 }
 /* ======= Generic section styling ======= */
 .section {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 .section-title {
   text-transform: uppercase;
@@ -191,7 +191,7 @@
 
 /* ======= Contact Section ======= */
 .contact-section {
-  background: linear-gradient(90deg, rgba(17,146,210,1) 0%, rgba(100,255,229,1) 100%);
+  background: #297ba1;
   color: #fff;
 }
 .contact-section a {
@@ -274,4 +274,8 @@
     background-color: #b71826;
     padding: 12px 20px;
     text-transform: uppercase;
+}
+.ui.footer.segment {
+    margin: 0;
+    padding: 0;
 }
