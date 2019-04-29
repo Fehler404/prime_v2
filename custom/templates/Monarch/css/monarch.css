@@ -58,6 +58,17 @@
 	border-radius: 0px;
 }
 .ui.segments {margin-top: 30px;}
+.ui.form {margin-top:10px;}
+
+.ui.menu .ui.list .item {
+	color: #777;
+	font-family: "Montserrat",sans-serif;
+}
+
+.ui.menu .ui.list .item:hover {
+	color: #000 !important;
+	font-family: "Montserrat",sans-serif;
+}
 
 #forum-node .ui.header {
 	background: #297ba1;
