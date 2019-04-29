@@ -57,6 +57,7 @@
 .ui.fluid.card {
 	border-radius: 0px;
 }
+.ui.segments {margin-top: 30px;}
 
 #forum-node .ui.header {
 	background: #297ba1;
@@ -203,6 +204,7 @@
 .contact-section {
   background: #297ba1;
   color: #fff;
+	margin-top: 35px;
 }
 .contact-section a {
   color: #fff;
