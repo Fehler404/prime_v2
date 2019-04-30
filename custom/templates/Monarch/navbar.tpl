@@ -1,38 +1,4 @@
 
-  <div class="ui masthead pusher" {if isset($BANNER_IMAGE)} style="background-image:url('{$BANNER_IMAGE}')"{/if}>
-    <div class="ui container">
-    <div class="ui stackable grid">
-      <div class="ui middle aligned row">
-        <div class="eight wide column">
-          <a href="{$SITE_HOME}"><h1 style="color:#fff;">{$SITE_NAME}</h1></a>
-        </div>
-        <div class="eight wide column">
-          {if isset($MINECRAFT)}
-            <div class="connect-server">
-		      {if isset($SERVER_QUERY)}
-		        {if isset($SERVER_QUERY.status_value) && $SERVER_QUERY.status_value == 1}
-			      {if isset($SERVER_QUERY.status_full)}
-			   	    <h4 class="ui header">{$SERVER_QUERY.status_full}</h4>
-			      {else}
-			        <h4 class="ui header">{$SERVER_QUERY.x_players_online}</h4>
-			      {/if}
-		        {else}
-		          <h4 class="ui header">{$SERVER_OFFLINE}</h4>
-		        {/if}
-		      {/if}
-		      {if isset($CLICK_TO_COPY_TOOLTIP)}
-		        <h4 class="ui header">
-		          <span onclick="copy('#ip')" data-tooltip="{$CLICK_TO_COPY_TOOLTIP}" data-variation="mini" data-inverted="" data-position="bottom center">{$CONNECT_WITH}</span>
-		        </h4>
-		      {/if}
-            </div>
-	      {/if}
-        </div>
-      </div>
-    </div>
-    </div>
-  </div>
-
 
 <div class="ui vertical inverted sidebar menu left" id="toc">
   <div class="item"><h3>{$SITE_NAME}</h3></div>
@@ -127,8 +93,43 @@
     </div>
   </div>
 
-    <div class="ui container intro">
-	    {if isset($NEW_UPDATE)}
+  <div class="ui masthead"{if isset($BANNER_IMAGE)} style="background-image:url('{$BANNER_IMAGE}')"{/if}>
+    <div class="ui container">
+    <div class="ui stackable grid">
+      <div class="ui middle aligned row">
+        <div class="eight wide column">
+          <h1>{$SITE_NAME}</h1>
+        </div>
+        <div class="eight wide column">
+          {if isset($MINECRAFT)}
+            <div class="connect-server">
+		      {if isset($SERVER_QUERY)}
+		        {if isset($SERVER_QUERY.status_value) && $SERVER_QUERY.status_value == 1}
+			      {if isset($SERVER_QUERY.status_full)}
+			   	    <h4 class="ui header">{$SERVER_QUERY.status_full}</h4>
+			      {else}
+			        <h4 class="ui header">{$SERVER_QUERY.x_players_online}</h4>
+			      {/if}
+		        {else}
+		          <h4 class="ui header">{$SERVER_OFFLINE}</h4>
+		        {/if}
+		      {/if}
+		      {if isset($CLICK_TO_COPY_TOOLTIP)}
+		        <h4 class="ui header">
+		          <span onclick="copy('#ip')" data-tooltip="{$CLICK_TO_COPY_TOOLTIP}" data-variation="mini" data-inverted="" data-position="bottom center">{$CONNECT_WITH}</span>
+		        </h4>
+		      {/if}
+            </div>
+	      {/if}
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="ui container">
+      
+    {if isset($NEW_UPDATE)}
       {if $NEW_UPDATE_URGENT eq true}
         <div class="ui negative message">
       {else}
