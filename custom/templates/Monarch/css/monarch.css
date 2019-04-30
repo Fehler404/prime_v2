@@ -11,12 +11,18 @@
 */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Oxygen');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800|Oxygen');
 
 
 /* ======= Masthead ======= */
 
-
+body {
+	font-family: "Montserrat",sans-serif;
+}
+a {
+    font-weight: 600;
+    font-family: "Montserrat",sans-serif;
+}
 
 .ui.container.intro {margin-top:20px !important;}
 .ui.secondary.menu {
@@ -27,12 +33,11 @@
 	color: #fff;
 	font-family: "Montserrat",sans-serif;
 	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: -.4px;
+	font-size: 1.025rem;
+	letter-spacing: -0.04em;
 }
 .ui.secondary.menu .item:hover {
 	color: #fff !important;
-	text-transform: uppercase;
 }
 .ui.secondary.menu .active.item {
     -webkit-box-shadow: none;
@@ -56,6 +61,8 @@
 }
 .ui.fluid.card {
 	border-radius: 0px;
+	-webkit-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
 }
 .ui.segments {margin-top: 30px;}
 .ui.form {margin-top:10px;}
@@ -69,18 +76,45 @@
 	color: #000 !important;
 	font-family: "Montserrat",sans-serif;
 }
+.ui.breadcrumb {
+	background: #fbfafa;
+	-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.ui.breadcrumb a {color: #999;}
+.ui.card > .content > .header {
+	font-family: "Montserrat",sans-serif;
+	font-weight: 600;
+}
 
+.masthead.pusher h1 {
+	font-family: "Montserrat",sans-serif;
+	font-weight: 600;
+}
 #forum-node .ui.header {
 	background: #297ba1;
 	padding: 20px;
+	border-radius: 5px;
+	font-family: "Montserrat",sans-serif;
+	letter-spacing: 0.25px;
+	font-weight: 700;
+	text-transform: uppercase;
 	color: #fff;
+}
+#forum-node .nine a {
+    color: #297ba1;
+    text-decoration: none;
+    background-color: transparent;
+    font-weight: 600;
+    font-family: "Montserrat",sans-serif;
+    font-size: 16px;
 }
 #forum-node .ui.grid .row {
 	padding-left: 20px;
 }
 .floated .primary.button {
 	background: #297ba1 !important;
-	padding: 15px 35px;
+	padding: 10px 15px;
 	border-radius: 0px;
 }
 .floated .primary.button {
@@ -131,12 +165,18 @@
 #navbar .ui.button:hover {background:#fff;color:#111;border-radius: 0px;}
 #navbar .ui.image.label {background:#fff;}
 
-#news-post .header {padding:10px 0;}
+#news-post .header {padding:10px 10px;text-align: left;}
 #news-post .content .header a {
-	font-family: "Open Sans",sans-serif;
+	font-family: "Montserrat",sans-serif;
 	color: #297ba1;
 	font-size: 1.4rem;
-	font-weight: bold;
+	font-weight: 600;
+}
+#news-post .content .header .meta a {
+	font-family: "Montserrat",sans-serif;
+	color: #999;
+	font-size: 1rem;
+	font-weight: 600;
 }
 #news-post .fa-arrow-right {margin-right:6px;}
 #news-post .ui.primary.button {
@@ -153,11 +193,13 @@
   text-shadow: 0 -1px 0 rgba(0,0,0,0);
 }
 #news-post .description {padding: 10px 20px;}
-
+#news-post .extra {padding: 10px 30px;}
 .top-text h2 {
 	text-transform: uppercase;
 	font-family: "Montserrat",sans-serif;
-	font-weight: 500;
+	font-weight: 600;
+	font-size: 25px;
+	margin-top: 25px;
 }
 .top-text hr {
 	width: 40px;
