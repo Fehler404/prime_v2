@@ -2,10 +2,7 @@
 
 
     TEMPLATE: MONARCH
-    VERSION: BETA-0.1
-
-     DEV: Jona Feucht
-     URL: https://jona.space
+    VERSION: BETA-0.5
 
 
 */
@@ -22,6 +19,9 @@ body {
 a {
     font-weight: 600;
     font-family: "Montserrat",sans-serif;
+}
+body.pushable > .pusher {
+	background-position: center;
 }
 
 .ui.container.intro {margin-top:20px !important;}
@@ -91,6 +91,9 @@ a {
 	font-family: "Montserrat",sans-serif;
 	font-weight: 600;
 }
+.masthead.pusher a:hover {
+	text-decoration: none;
+}
 #forum-node .ui.header {
 	background: #297ba1;
 	padding: 20px;
@@ -155,6 +158,13 @@ a {
 	border-bottom: 2px solid #1113;
 	border-radius: 0px;
 }
+.ui.card > .extra a {
+	font-family: "Montserrat",sans-serif;
+}
+.ui.padded.segment {
+	-webkit-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+}
 
 #navbar .ui.button {
 	background:transparent;
@@ -180,8 +190,23 @@ a {
 }
 #news-post .fa-arrow-right {margin-right:6px;}
 #news-post .ui.primary.button {
-  background: #297ba1 !important;
-	padding: 10px 25px;
+	text-align: center;
+	background: #fff;
+	border: 2px #297ba1 solid;
+	color: #297ba1;
+	margin: 0 auto 20px auto;
+	box-shadow: 0px;
+	display: inline-block;
+	font-family: "Montserrat",sans-serif;
+}
+#news-post .ui.primary.button:hover {
+	text-align: center;
+	background: #297ba1;
+	border: 2px #297ba1 solid;
+	color: #fff;
+	margin: 0 auto 20px auto;
+	box-shadow: 0px;
+	display: inline-block;
 }
 #news-post .mini {
   line-height: 1.28;
@@ -216,6 +241,30 @@ a {
 	text-transform: uppercase;
 	font-weight: 600;
 }
+.ui.inverted.link.list .item a:hover {
+	color: #fff !important;
+	text-decoration: none;
+}
+
+.ui.table thead tr:first-child > th:only-child {
+	border-radius: 4px;
+border: none;
+color: white;
+background: #297ba1;
+padding: 17px 19px 13px;
+-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+box-shadow: 0 2px 2px;
+}
+.ui.table thead tr:first-child {
+	border-radius: 4px;
+border: none;
+color: white;
+background: #297ba1;
+padding: 17px 19px 13px;
+-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+box-shadow: 0 2px 2px;
+}
+
 /* ======= Generic section styling ======= */
 .section {
   padding-top: 40px;
