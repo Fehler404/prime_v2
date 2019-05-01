@@ -387,9 +387,18 @@ box-shadow: 0 2px 2px;
     color: #fff;
     background-color: #b71826;
     padding: 12px 20px;
+		border-radius: 4px;
     text-transform: uppercase;
+		font-family: "Montserrat",sans-serif;
 }
 .ui.footer.segment {
     margin: 0;
     padding: 0;
+}
+
+.modal-backdrop {
+    z-index: 0 !important;
+}
+.modal-backdrop.show {
+	opacity: 0 !important;
 }

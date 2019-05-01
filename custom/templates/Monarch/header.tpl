@@ -8,29 +8,29 @@
 <!DOCTYPE html>
 <html{$HTMLCLASS}{$HTMLLANG}{$HTMLRTL}>
   <head>
-    
+
     <meta charset="{$METACHARSET}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>{$TITLE} &bull; {$smarty.const.SITE_NAME}</title>
-  
+
     <meta name="author" content="{$smarty.const.SITE_NAME}">
     <meta name='description' content='{$PAGEDESCRIPTION}' />
     <meta name='keywords' content='{$PAGEKEYWORDS}' />
-  
+
     <meta property="og:title" content="{$TITLE} &bull; {$smarty.const.SITE_NAME}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{$OG_URL}" />
     <meta property="og:image" content="{$OG_IMAGE}" />
     <meta property='og:description' content='{$PAGEDESCRIPTION}' />
-  
+
     {foreach from=$TEMPLATE_CSS item=css}
       {$css}
     {/foreach}
-	
-	<link rel="stylesheet" href="{$TEMPLATE.path}/css/monarch.css">
-	<link rel="stylesheet" href="{$TEMPLATE.path}/css/bootstrap.min.css">
-  
+
+	<link rel="stylesheet" href="{$TEMPLATE.path}css/bootstrap.min.css">
+  <link rel="stylesheet" href="{$TEMPLATE.path}css/monarch.css">
+
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 
   </head>
