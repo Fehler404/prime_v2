@@ -28,9 +28,6 @@
       {$css}
     {/foreach}
 
-	<link rel="stylesheet" href="{$TEMPLATE.path}css/bootstrap.min.css">
-  <link rel="stylesheet" href="{$TEMPLATE.path}css/monarch.css">
-
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 
   </head>

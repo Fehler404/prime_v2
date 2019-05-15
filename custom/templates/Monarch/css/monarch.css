@@ -387,15 +387,6 @@ box-shadow: 0 2px 2px;
   font-size: 36px;
 }
 
-
-.badge-danger {
-    color: #fff;
-    background-color: #b71826;
-    padding: 12px 20px;
-		border-radius: 4px;
-    text-transform: uppercase;
-		font-family: "Montserrat",sans-serif;
-}
 .ui.footer.segment {
     margin: 0;
     padding: 0;
