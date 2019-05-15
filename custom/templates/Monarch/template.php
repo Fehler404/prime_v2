@@ -1,7 +1,7 @@
 <?php
 /*
  *	Made by Samerton | Revamped by Xemah
- *	Template by Spiele
+ *	Fork Template by Spiele
  *	https://github.com/NamelessMC/Nameless/
  *	NamelessMC version 2.0.0-pr6
  *
@@ -52,7 +52,9 @@ class Monarch_Template extends TemplateBase {
 	public function onPageLoad() {
 
 		$this->addCSSFiles(array(
-		    $this->_template['path'] . 'css/custom.css' => array()
+			$this->_template['path'] . 'css/bootstrap.min.css' => array(),
+			$this->_template['path'] . 'css/monarch.css' => array(),
+			$this->_template['path'] . 'css/custom.css' => array()
 		));
 
 	    $route = (isset($_GET['route']) ? rtrim($_GET['route'], '/') : '/');
