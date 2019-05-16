@@ -32,10 +32,11 @@
             <label for="inputPasswordAgain">{$CONFIRM_PASSWORD}</label>
             <input type="password" name="password_again" id="inputPasswordAgain" placeholder="{$CONFIRM_PASSWORD}" autocomplete="off" tabindex="2">
           </div>
+          
           <div class="inline field">
             <div class="ui checkbox">
-              <input type="checkbox" name="remember" id="remember" value="1" tabindex="3">
-              <label>{$REMEMBER_ME}</label>
+              <input type="checkbox" name="t_and_c" id="t_and_c" value="1" tabindex="7">
+              <label>{$AGREE_TO_TERMS}</label>
             </div>
           </div>
           <input type="hidden" name="token" value="{$TOKEN}">
