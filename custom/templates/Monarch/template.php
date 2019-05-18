@@ -32,6 +32,7 @@ class Monarch_Template extends TemplateBase {
 		));
 
 		$this->addJSFiles(array(
+			$template['path'] . 'js/boostrap.min.js' => array(),
 			$template['path'] . 'js/jquery.min.js' => array(),
 			$template['path'] . 'js/jquery.cookie.js' => array(),
 			$template['path'] . 'js/semantic.min.js' => array(),
