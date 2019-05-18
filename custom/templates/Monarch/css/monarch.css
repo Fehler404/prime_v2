@@ -137,6 +137,14 @@ body.pushable > .pusher {
 	margin: 0 auto 20px auto;
 	display: inline-block;
 }
+.floated .primary.button:focus {
+	text-align: center;
+	background: #297ba1 !important;
+	border: 2px #297ba1 solid;
+	color: #fff;
+	margin: 0 auto 20px auto;
+	display: inline-block;
+}
 
 #form-login .ui.primary.button {
 	background: #297ba1 !important;
