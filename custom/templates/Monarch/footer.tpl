@@ -45,7 +45,6 @@
   {foreach from=$TEMPLATE_JS item=script}
     {$script}
   {/foreach}
-  <script src="{$TEMPLATE.path}/js/bootstrap.min.js"></script>
 
   {if isset($NEW_UPDATE) && ($NEW_UPDATE_URGENT != true)}
     <script src="{$TEMPLATE.path}/js/core/update.js"></script>
