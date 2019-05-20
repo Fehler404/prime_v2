@@ -17,6 +17,17 @@
             <i class="picture icon"></i>
           </a>
         {/if}
+        {if isset($FRIENDS)}
+          {if ($FRIEND.action == "addFriend" || $FRIEND.action == "acceptRequest")}
+            <button onclick="$('#form-friend').submit();" class="ui tiny positive icon button" data-toggle="tooltip" data-content="{$FRIEND.text}">{$FRIEND.icon}</button>
+          {else}
+            <button onclick="$('#form-friend').submit();" class="ui tiny negative icon button" data-toggle="tooltip" data-content="{$FRIEND.text}">{$FRIEND.icon}</button>
+          {/if}
+          <form action="" method="post" id="form-friend">
+            <input type="hidden" name="token" value="{$TOKEN}">
+            <input type="hidden" name="action" value="{$FRIEND.action}">
+          </form>
+        {/if}
       {/if}
     {/if}
   </div>
@@ -39,7 +50,7 @@
         <div class="ui success icon message">
           <i class="check icon"></i>
           <div class="content">
-            <div class="header">{$SUCCESS_TITLE}/div>
+            <div class="header">{$SUCCESS_TITLE}</div>
             {$SUCCESS}
           </div>
         </div>
@@ -95,8 +106,8 @@
                       {/if}
                       {if (isset($CAN_MODERATE) && $CAN_MODERATE == 1) || $post.self == 1}
                         <a data-toggle="modal" data-target="#modal-edit-{$post.id}">{$EDIT}</a>
-                        <a onclick="{literal}if(confirm(confirmDelete)){$('form-delete-{$post.id}').submit();}{/literal}">{$DELETE}</a>
-                        <form action="" method="post" id="form-delete-{$post.id}">
+                        <a onclick="{literal}if(confirm(confirmDelete)){$('#form-delete-post-{/literal}{$post.id}{literal}').submit();}{/literal}">{$DELETE}</a>
+                        <form action="" method="post" id="form-delete-post-{$post.id}">
                           <input type="hidden" name="post_id" value="{$post.id}">
                           <input type="hidden" name="action" value="delete">
                           <input type="hidden" name="token" value="{$TOKEN}">
@@ -126,7 +137,7 @@
                                     <input type="hidden" name="token" value="{$TOKEN}">
                                     <input type="hidden" name="post_id" value="{$item.id}">
                                   </form>
-                                  <a onclick="{literal}if(confirm(confirmDelete)){$('#form-delete-{$item.id}').submit();};{/literal}">{$DELETE}</a>
+                                  <a onclick="{literal}if(confirm(confirmDelete)){$('#form-delete-{/literal}{$item.id}{literal}').submit();}{/literal}">{$DELETE}</a>
                                 {/if}
                               </div>
                             </div>
@@ -146,6 +157,25 @@
             </div>
           {/if}
         </div>
+        {if isset($FRIENDS)}
+          <div class="ui bottom attached tab segment" data-tab="friends" id="profile-friends">
+            <h3 class="ui header">{$FRIENDS}</h3>
+            {if count($FRIENDS_LIST)}
+              <div class="ui stackable grid">
+                <div class="ui row" style="margin-top:1rem;">
+                  {foreach from=$FRIENDS_LIST item=$item}
+                    <div class="four wide column center aligned">
+                      <img class="ui tiny image avatar" src="{$item.avatar}">
+                      <h3 style="margin-top:.5rem;margin-bottom:2rem;"><a href="{$item.profile}">{$item.nickname}</a></h3>
+                    </div>
+                  {/foreach}
+                </div>
+              </div>
+            {else}
+              <p>{$NO_FRIENDS}</p>
+            {/if}
+          </div>
+        {/if}
         <div class="ui bottom attached tab segment" data-tab="about" id="profile-about">
           <h3 class="ui header">{$ABOUT}</h3>
           <div class="ui relaxed list">
@@ -295,7 +325,7 @@
     {/if}
   {else}
     <!-- Change background image modal -->
-    <div class="ui modal" id="imageModal">
+    <div class="ui small modal" id="imageModal">
       <div class="header">
         {$CHANGE_BANNER}
       </div>
@@ -309,25 +339,24 @@
           <input type="hidden" name="token" value="{$TOKEN}">
           <input type="hidden" name="action" value="banner">
         </form>
-
         {if isset($PROFILE_BANNER)}
-        <div class="ui divider"></div>
-        <strong>{$UPLOAD_PROFILE_BANNER}</strong>
-        <br />
-        <form action="{$UPLOAD_BANNER_URL}" class="ui form" method="post" enctype="multipart/form-data" style="display:inline;">
-          <input type="file" class="inputFile" name="file" id="uploadBannerInput" hidden />
-          <label for="uploadBannerInput" class="ui blue button">
-            <i class="ui upload icon"></i>
-            {$BROWSE}
-          </label>
-          <input type="hidden" name="token" value="{$TOKEN}">
-          <input type="hidden" name="type" value="profile_banner">
-          <input type="submit" value="{$UPLOAD}" class="ui green button">
-          {/if}
+          <div class="ui horizontal divider">Or {$UPLOAD_PROFILE_BANNER}</div>
+          <center>
+            <form class="ui form" action="{$UPLOAD_BANNER_URL}" method="post" enctype="multipart/form-data" id="form-banner">
+              <input type="file" class="inputFile" name="file" id="uploadBannerInput" hidden />
+              <label class="ui icon labeled default button" for="uploadBannerInput">
+                <i class="ui cloud upload icon"></i> {$BROWSE}
+              </label>
+              <input type="hidden" name="token" value="{$TOKEN}">
+              <input type="hidden" name="type" value="profile_banner">
+              <button type="submit" class="ui icon labeled primary button" type="submit"><i class="ui upload icon"></i> {$UPLOAD}</button>
+            </form>
+          </center>
+        {/if}
       </div>
       <div class="actions">
-        <button type="button" class="ui negative button">{$CANCEL}</button>
-        <button type="button" onclick="document.updateBanner.submit()" class="ui blue button">{$SUBMIT}</button>
+        <button class="ui negative button">{$CANCEL}</button>
+        <button class="ui positive button" onclick="document.updateBanner.submit()">{$SUBMIT}</button>
       </div>
     </div>
   {/if}
