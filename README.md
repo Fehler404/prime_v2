@@ -18,6 +18,12 @@ You're not allowed to:
 
 ```
 custom/
+├── page_templates/
 ├── templates/
 │   ├── Monarch/
+modules/
+├── Forms/
+├── Friends/
+├── Members/
+├── Vote/
 ```
