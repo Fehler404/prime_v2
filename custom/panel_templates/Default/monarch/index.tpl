@@ -87,8 +87,10 @@
 										<option value='gold'{if $NAV_THEME_VALUE eq 'gold'} selected{/if}>{$GOLD}</option>
 										<option value='orange'{if $NAV_THEME_VALUE eq 'orange'} selected{/if}>{$ORANGE}</option>
                                         <option value='#ff5240'{if $NAV_THEME_VALUE eq 'somewhatorange'} selected{/if}>{$SOMEWHATORANGE}</option>
+                                        <option value='#f8b88b'{if $NAV_THEME_VALUE eq 'sandpaper'} selected{/if}>Sandpaper</option>
 										<option value='brown'{if $NAV_THEME_VALUE eq 'brown'} selected{/if}>{$BROWN}</option>
 										<option value='pink'{if $NAV_THEME_VALUE eq 'pink'} selected{/if}>{$PINK}</option>
+										<option value='rgb(242, 183, 182)'{if $NAV_THEME_VALUE eq 'maybepink'} selected{/if}>Maybe Pink</option>
 										<option value='purple'{if $NAV_THEME_VALUE eq 'purple'} selected{/if}>{$PURPLE}</option>
                                         <option value='#6000ff'{if $NAV_THEME_VALUE eq 'purple2'} selected{/if}>PURPLE 2</option>
 										<option value='gray'{if $NAV_THEME_VALUE eq 'gray'} selected{/if}>{$GRAY}</option>
