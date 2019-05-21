@@ -77,7 +77,8 @@
 									<label for='Theme'>{$NAV_THEME}</label>
 									<select id="Theme" class='form-control' name='theme'>
 										<option value='#297ba1'{if $NAV_THEME_VALUE eq 'monarch'} selected{/if}>{$MONARCH}</option>
-										<option value='darkred'{if $NAV_THEME_VALUE eq 'darkred'} selected{/if}>{$DARKRED}</option>
+										<option value='red'{if $NAV_THEME_VALUE eq 'red'} selected{/if}>{$RED}</option>
+                                        <option value='darkred'{if $NAV_THEME_VALUE eq 'darkred'} selected{/if}>{$DARKRED}</option>
 										<option value='aqua'{if $NAV_THEME_VALUE eq 'aqua'} selected{/if}>{$AQUA}</option>
 										<option value='blue'{if $NAV_THEME_VALUE eq 'blue'} selected{/if}>{$BLUE}</option>
 										<option value='darkblue'{if $NAV_THEME_VALUE eq 'darkblue'} selected{/if}>{$DARKBLUE}</option>
@@ -85,12 +86,13 @@
 										<option value='darkgreen'{if $NAV_THEME_VALUE eq 'darkgreen'} selected{/if}>{$DARKGREEN}</option>
 										<option value='gold'{if $NAV_THEME_VALUE eq 'gold'} selected{/if}>{$GOLD}</option>
 										<option value='orange'{if $NAV_THEME_VALUE eq 'orange'} selected{/if}>{$ORANGE}</option>
+                                        <option value='#ff5240'{if $NAV_THEME_VALUE eq 'somewhatorange'} selected{/if}>{$SOMEWHATORANGE}</option>
 										<option value='brown'{if $NAV_THEME_VALUE eq 'brown'} selected{/if}>{$BROWN}</option>
 										<option value='pink'{if $NAV_THEME_VALUE eq 'pink'} selected{/if}>{$PINK}</option>
 										<option value='purple'{if $NAV_THEME_VALUE eq 'purple'} selected{/if}>{$PURPLE}</option>
+                                        <option value='#6000ff'{if $NAV_THEME_VALUE eq 'purple2'} selected{/if}>PURPLE 2</option>
 										<option value='gray'{if $NAV_THEME_VALUE eq 'gray'} selected{/if}>{$GRAY}</option>
 										<option value='black'{if $NAV_THEME_VALUE eq 'black'} selected{/if}>{$BLACK}</option>
-										<option value='rainbow'{if $NAV_THEME_VALUE eq 'rainbow'} selected{/if}>{$RAINBOW}</option>
 									</select>
 									<br>
 								</div>	

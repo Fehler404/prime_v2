@@ -377,6 +377,8 @@ $smarty->assign(array(
 	'GADS_SLOT' => $monarch_language->get('language', 'gads_slot'),
 	'GADS_SLOT_PLACEHOLDER' => $monarch_language->get('language', 'gads_slot_placeholder'),
 	// Thems
+	'MONARCH' => $monarch_language->get('language', 'monarch'),
+	'SOMEWHATORANGE' => $monarch_language->get('language', 'somewhatorange'),
 	'RED' => $monarch_language->get('language', 'red'),
 	'DARKRED' => $monarch_language->get('language', 'darkred'),
 	'AQUA' => $monarch_language->get('language', 'aqua'),
