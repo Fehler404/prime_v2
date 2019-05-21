@@ -1,4 +1,4 @@
-## MONARCH Template for NamelessMC (v2)
+## MONARCH Template for Nameless v2.0.0-pre6
 
 How to install:
 
@@ -22,8 +22,4 @@ custom/
 ├── templates/
 │   ├── Monarch/
 modules/
-├── Forms/
-├── Friends/
-├── Members/
-├── Vote/
 ```
