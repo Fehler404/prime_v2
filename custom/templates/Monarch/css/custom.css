@@ -3,50 +3,6 @@
  */
 
 /*
- *  [ NAVIGATION BAR ]
- */
-
-.ui.secondary.menu {
-background: #297ba1;
-padding: 20px;
-}
-
-.ui.secondary.menu .toc.item {
-	display: none;
-}
-
-.ui.secondary.menu .toc.item i {
-	margin: 0;
-}
-
-.ui.secondary.menu .ui.medium.label {
-	padding: .68em 1em .5em .5em;
-}
-
-.ui.secondary.menu .ui.medium.label img {
-	font-size: 1.09rem;
-	margin: -.6em .5em -.6em -.5em;
-}
-
-@media only screen and (max-width: 768px) {
-	.ui.secondary.menu .menu,
-	.ui.secondary.menu .item {
-		display: none;
-	}
-	.ui.secondary.menu .toc.item {
-		display: block;
-	}
-}
-
-.ui.secondary.menu .ui.popup {
-	min-width: 200px;
-}
-
-.ui.secondary.menu .ui.popup a:not([href]) {
-	cursor: default !important;
-}
-
-/*
  *  [ HEADER ]
  */
 
