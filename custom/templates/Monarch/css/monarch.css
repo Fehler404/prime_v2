@@ -1,3 +1,5 @@
+
+
 /*
 
     TEMPLATE: MONARCH
@@ -22,8 +24,48 @@ body.pushable > .pusher {
 }
 
 .ui.container.intro {margin-top:20px !important;}
+
+
+/* =======[ NAVIGATION BAR]=======*/
+
+.ui.secondary.menu .toc.item {
+	display: none;
+}
+
+.ui.secondary.menu .toc.item i {
+	margin: 0;
+}
+
+.ui.secondary.menu .ui.medium.label {
+	padding: .68em 1em .5em .5em;
+}
+
+.ui.secondary.menu .ui.medium.label img {
+	font-size: 1.09rem;
+	margin: -.6em .5em -.6em -.5em;
+}
+
+@media only screen and (max-width: 768px) {
+
+	.ui.secondary.menu .menu,
+	.ui.secondary.menu .item {
+		display: none;
+	}
+
+	.ui.secondary.menu .toc.item {
+		display: block;
+	}
+}
+
+.ui.secondary.menu .ui.popup {
+	min-width: 200px;
+}
+
+.ui.secondary.menu .ui.popup a:not([href]) {
+	cursor: default !important;
+}
+
 .ui.secondary.menu {
-	background: #297ba1;
 	padding: 20px;
 }
 .ui.secondary.menu .item {
@@ -169,22 +211,11 @@ body.pushable > .pusher {
 	}
 }
 
-
-#forum-node .ui.header {
-	background: #297ba1;
-	padding: 20px;
-	border-radius: 5px;
-	font-family: "Montserrat",sans-serif;
-	letter-spacing: 0.25px;
-	font-weight: 700;
-	text-transform: uppercase;
-	color: #fff;
-}
 #forum-node .nine a {
-    color: #297ba1;
+    color: #000;
     text-decoration: none;
     background-color: transparent;
-    font-weight: 600;
+    font-weight: 500;
     font-family: "Montserrat",sans-serif;
     font-size: 16px;
 }
@@ -192,7 +223,7 @@ body.pushable > .pusher {
 	padding-left: 20px;
 }
 .floated .primary.button {
-	background: #297ba1 !important;
+	background: {$MONARCH_COLOR} !important;
 	padding: 10px 15px;
 	border-radius: 0px;
 }
@@ -265,9 +296,10 @@ body.pushable > .pusher {
 #navbar .ui.image.label {background:#fff;}
 
 #news-post .header {padding:10px 10px;text-align: left;}
+
 #news-post .content .header a {
 	font-family: "Montserrat",sans-serif;
-	color: #297ba1;
+	color: #000;
 	font-size: 1.4rem;
 	font-weight: 600;
 }
@@ -281,8 +313,8 @@ body.pushable > .pusher {
 #news-post .ui.primary.button {
 	text-align: center;
 	background: #fff;
-	border: 2px #297ba1 solid;
-	color: #297ba1;
+	border: 2px #000 solid;
+	color: #000;
 	margin: 0 auto 20px auto;
 	box-shadow: 0px;
 	display: inline-block;
@@ -322,9 +354,7 @@ body.pushable > .pusher {
 }
 .ui.menu:not(.vertical) .right.menu{display:-webkit-box;display:-ms-flexbox;display:flexbox;margin-left:auto!important}
 .pushable > .pusher {min-height: 0;}
-.ui.inverted.menu {
-	background: #297ba1;
-}
+
 .ui.sidebar.menu .item {
 	font-family: "Montserrat",sans-serif;
 	text-transform: uppercase;
@@ -491,4 +521,4 @@ box-shadow: 0 2px 2px;
 	background: #297ba1 !important;
 	padding: 8px 17px;
 	border-radius: 0px;
-}
+}‚
