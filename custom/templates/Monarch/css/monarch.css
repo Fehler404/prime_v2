@@ -383,6 +383,16 @@ padding: 17px 19px 13px;
 -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
 box-shadow: 0 2px 2px;
 }
+.ui.relaxed.list {
+	margin: 10px;
+}
+.ui.relaxed.list:not(.horizontal)>.item:not(:first-child) {
+	padding: 1px;
+}
+.ui.relaxed.list:not(.horizontal)>.item:not(:last-child) {
+	padding: 2px;
+	line-height: 1.5;
+}
 
 /* ======= Generic section styling ======= */
 .section {
@@ -521,4 +531,14 @@ box-shadow: 0 2px 2px;
 	background: #297ba1 !important;
 	padding: 8px 17px;
 	border-radius: 0px;
-}‚
+}
+
+.profile-data {
+	margin-top: 40px;
+}
+.profile-data .col-md-9 {
+	padding: 0px;
+}
+#profile-header .profile-nickname span {
+	text-shadow: 2px 2px 25px rgba(255, 255, 255, 0.7);
+}
