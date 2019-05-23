@@ -1,8 +1,61 @@
 {include file='header.tpl'}
 {include file='navbar.tpl'}
-
-<div class="ui segment center aligned" id="profile-header" style="background-image:url('{$BANNER}');background-size:cover;">
-  <div class="actions">
+<div class="ui row">
+<div class="col-md-3">
+  <center>
+    <img class="ui tiny circular image" src="{$AVATAR}">
+  </center>
+      <hr>
+          <div class="ui relaxed list">
+            <div class="item">
+              <div class="aligned content">
+                <div><b>{$ABOUT_FIELDS.registered.title}</b> {$ABOUT_FIELDS.registered.value}</div>
+              </div>
+              <div class="ui wide popup">
+                <h4>{$ABOUT_FIELDS.registered.title|replace:':':''}</h4>
+                <br />
+                {$ABOUT_FIELDS.registered.tooltip}
+              </div>
+            </div>
+            <div class="item">
+              <div class="aligned content">
+                <div><b>{$ABOUT_FIELDS.last_seen.title}</b> {$ABOUT_FIELDS.last_seen.value}</div>
+              </div>
+              <div class="ui wide popup">
+                <h4 class="ui header">{$ABOUT_FIELDS.last_seen.title|replace:':':''}</h4>
+                <br />
+                {$ABOUT_FIELDS.last_seen.tooltip}
+              </div>
+            </div>
+            <div class="item">
+              <div class="aligned content">
+                <div><b>{$ABOUT_FIELDS.profile_views.title}</b> {$ABOUT_FIELDS.profile_views.value}</div>
+              </div>
+            </div>
+          </div>
+          {if !isset($NO_ABOUT_FIELDS)}
+            <div class="ui relaxed list">
+              {foreach from=$ABOUT_FIELDS key=key item=field}
+                {if is_numeric($key)}
+                  <div class="item">
+                    <div class="maligned content">
+                      <div>{$field.title}: {$field.value}</div>
+                    </div>
+                  </div>
+                {/if}
+              {/foreach}
+            </div>
+          {else}
+            <div class="ui info message">
+              <div class="content">
+                {$NO_ABOUT_FIELDS}
+              </div>
+            </div>
+          {/if}
+      <hr>
+</div>
+<div class="col-md-9" id="profile-header" style="background-image:url('{$BANNER}');background-size:cover;">
+  <div class="actions centered">
     {if isset($LOGGED_IN)}
       {if isset($SELF)}
         <a class="ui tiny primary icon button" href="{$SETTINGS_LINK}"><i class="cogs icon"></i></a>
@@ -29,11 +82,8 @@
           </form>
         {/if}
       {/if}
-    {/if}
-  </div>
-  <center>
-    <img class="ui tiny circular image" src="{$AVATAR}">
-    <h2 class="ui header">
+      <center>
+    <h2 class="ui header profile-nickname">
       <span{if $USERNAME_COLOUR != false} style="{$USERNAME_COLOUR}"{/if}>{$NICKNAME}</span>
       {if isset($USER_TITLE)}
         <div class="sub header">{$USER_TITLE}</div>
@@ -41,11 +91,43 @@
     </h2>
     {$GROUP}
   </center>
+    {/if}
+  </div>
+</div>
 </div>
 
-<div class="ui stackable grid" id="profile">
-  <div class="ui centered row">
-    <div class="ui {if count($WIDGETS)}ten wide tablet twelve wide computer{else}sixteen wide{/if} column">
+  <div class="ui row profile-data">
+    {if !empty($WIDGETS) || isset($FRIENDS)}
+      <div class="col-md-3">
+        {if isset($FRIENDS)}
+          <div class="card card-default">
+            <div class="card-header">
+              <i class="fas fa-users"></i> {$FRIENDS}
+            </div>
+            <div class="card-body{if count($FRIENDS_LIST)} text-center{/if}">	
+              {if count($FRIENDS_LIST)}
+                {foreach from=$FRIENDS_LIST item=$item}
+                  <a href="{$item.profile}">
+                    <img class="rounded-circle float-none" src="{$item.avatar}" style="width:40px;height:40px;margin:2px;" data-toggle="tooltip" title="{$item.nickname}">
+                  </a>
+                {/foreach}
+              {else}
+                {$NO_FRIENDS}
+              {/if}
+            </div>
+          </div>
+          <br />
+        {/if}
+        {if !empty($WIDGETS)}
+          {foreach from=$WIDGETS item=widget}
+            {$widget}
+            <br />
+          {/foreach}
+         {/if}
+      </div>
+    {/if}
+
+    <div class="col-md-9">
       {if isset($SUCCESS)}
         <div class="ui success icon message">
           <i class="check icon"></i>
@@ -67,7 +149,6 @@
       {if $CAN_VIEW}
         <div class="ui top attached tabular menu">
           <a class="item active" data-tab="feed">{$FEED}</a>
-          <a class="item" data-tab="about">{$ABOUT}</a>
           {foreach from=$TABS key=key item=tab}
             <a class="item" data-tab="{$key}">{$tab.title}</a>
           {/foreach}
@@ -176,63 +257,7 @@
             {/if}
           </div>
         {/if}
-        <div class="ui bottom attached tab segment" data-tab="about" id="profile-about">
-          <h3 class="ui header">{$ABOUT}</h3>
-          <div class="ui relaxed list">
-            <div class="item">
-              <i class="angle right icon"></i>
-              <div class="middle aligned content" data-toggle="popup">
-                <div class="header">{$ABOUT_FIELDS.registered.title}</div>
-                <div class="description">{$ABOUT_FIELDS.registered.value}</div>
-              </div>
-              <div class="ui wide popup">
-                <h4 class="ui header">{$ABOUT_FIELDS.registered.title|replace:':':''}</h4>
-                <br />
-                {$ABOUT_FIELDS.registered.tooltip}
-              </div>
-            </div>
-            <div class="item">
-              <i class="angle right icon"></i>
-              <div class="middle aligned content" data-toggle="popup">
-                <div class="header">{$ABOUT_FIELDS.last_seen.title}</div>
-                <div class="description">{$ABOUT_FIELDS.last_seen.value}</div>
-              </div>
-              <div class="ui wide popup">
-                <h4 class="ui header">{$ABOUT_FIELDS.last_seen.title|replace:':':''}</h4>
-                <br />
-                {$ABOUT_FIELDS.last_seen.tooltip}
-              </div>
-            </div>
-            <div class="item">
-              <i class="angle right icon"></i>
-              <div class="middle aligned content">
-                <div class="header">{$ABOUT_FIELDS.profile_views.title}</div>
-                <div class="description">{$ABOUT_FIELDS.profile_views.value}</div>
-              </div>
-            </div>
-          </div>
-          {if !isset($NO_ABOUT_FIELDS)}
-            <div class="ui relaxed list">
-              {foreach from=$ABOUT_FIELDS key=key item=field}
-                {if is_numeric($key)}
-                  <div class="item">
-                    <i class="angle right icon"></i>
-                    <div class="middle aligned content">
-                      <div class="header">{$field.title}</div>
-                      <div class="description">{$field.value}</div>
-                    </div>
-                  </div>
-                {/if}
-              {/foreach}
-            </div>
-          {else}
-            <div class="ui info message">
-              <div class="content">
-                {$NO_ABOUT_FIELDS}
-              </div>
-            </div>
-          {/if}
-        </div>
+      
         {foreach from=$TABS key=key item=tab}
           <div class="ui bottom attached tab segment" data-tab="{$key}" id="profile-{$key}">
             {include file=$tab.include}
@@ -254,7 +279,6 @@
       </div>
     {/if}
   </div>
-</div>
 
 {if count($WALL_POSTS)}
   {foreach from=$WALL_POSTS item=post}
