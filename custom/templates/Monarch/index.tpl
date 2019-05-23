@@ -36,8 +36,8 @@
           <div class="ui fluid card" id="news-post">
             <div class="content">
               <div class="header">
-                {if isset($item.label)}{$item.label}{/if}
                 <a href="{$item.url}" data-toggle="popup">{$item.title}</a>
+                {if isset($item.label)}{$item.label}{/if}
                 <div class="meta" data-toggle="tooltip" data-content="{$item.date}">
                     <a href="{$item.url}">{$item.time_ago}</a>
                 </div>
@@ -73,21 +73,6 @@
   </div>
 </div>
 </div>
-<!-- Broken?
-<div class="col-md-3">
-  <div class="top-text">
-     <center><h2>{$SOCIAL}</h2></center>
-	    <hr />
-    </div>
-		{if count($WIDGETS)}
-		  {foreach from=$WIDGETS item=widget}
-			{$widget}
-			<br />
-		  {/foreach}
-		{/if}
-
-	</div>
-  -->
 </div>
 </section>
 
