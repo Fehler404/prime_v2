@@ -3,7 +3,7 @@
 <div class="ui row">
 <div class="col-md-3">
   <center>
-    <img class="ui tiny circular image" src="{$AVATAR}">
+    <img class="ui tiny image" style="border-radius:12px" src="{$AVATAR}">
   </center>
       <hr>
           <div class="ui relaxed list">
@@ -100,15 +100,15 @@
     {if !empty($WIDGETS) || isset($FRIENDS)}
       <div class="col-md-3">
         {if isset($FRIENDS)}
-          <div class="card card-default">
+          <div class="primaryContent avatarHeap card">
             <div class="card-header">
-              <i class="fas fa-users"></i> {$FRIENDS}
+            {$FRIENDS}
             </div>
-            <div class="card-body{if count($FRIENDS_LIST)} text-center{/if}">	
+            <div class="card-body{if count($FRIENDS_LIST)}{/if}">	
               {if count($FRIENDS_LIST)}
                 {foreach from=$FRIENDS_LIST item=$item}
                   <a href="{$item.profile}">
-                    <img class="rounded-circle float-none" src="{$item.avatar}" style="width:40px;height:40px;margin:2px;" data-toggle="tooltip" title="{$item.nickname}">
+                    <img class="userAvatarImage" src="{$item.avatar}" data-toggle="tooltip" title="{$item.nickname}">
                   </a>
                 {/foreach}
               {else}
