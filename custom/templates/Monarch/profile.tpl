@@ -98,7 +98,7 @@
 
   <div class="ui row profile-data">
     {if !empty($WIDGETS) || isset($FRIENDS)}
-      <div class="col-md-3">
+      <div class="col-md-3 mobile-hide">
         {if isset($FRIENDS)}
           <div class="primaryContent avatarHeap card">
             <div class="card-header">
@@ -169,7 +169,7 @@
             <div class="ui threaded comments" id="profile-posts">
               {foreach from=$WALL_POSTS item=post}
                 <div class="comment">
-                  <a class="ui circular image avatar">
+                  <a class="ui image avatar">
                     <img src="{$post.avatar}" alt="{$post.nickname}">
                   </a>
                   <div class="content">
@@ -200,7 +200,7 @@
                       <div class="comments">
                         {foreach from=$post.replies.replies item=item}
                           <div class="comment">
-                            <a class="ui circular image avatar">
+                            <a class="ui image avatar">
                               <img src="{$item.avatar}" alt="{$item.nickname}">
                             </a>
                             <div class="content">
@@ -271,11 +271,34 @@
         </div>
       {/if}
     </div>
-    {if count($WIDGETS)}
-      <div class="ui six wide tablet four wide computer column">
-        {foreach from=$WIDGETS item=widget}
-          {$widget}
-        {/foreach}
+
+    {if !empty($WIDGETS) || isset($FRIENDS)}
+      <div class="col-md-3 desktop-hide">
+        {if isset($FRIENDS)}
+          <div class="primaryContent avatarHeap card">
+            <div class="card-header">
+            {$FRIENDS}
+            </div>
+            <div class="card-body{if count($FRIENDS_LIST)}{/if}">	
+              {if count($FRIENDS_LIST)}
+                {foreach from=$FRIENDS_LIST item=$item}
+                  <a href="{$item.profile}">
+                    <img class="userAvatarImage" src="{$item.avatar}" data-toggle="tooltip" title="{$item.nickname}">
+                  </a>
+                {/foreach}
+              {else}
+                {$NO_FRIENDS}
+              {/if}
+            </div>
+          </div>
+          <br />
+        {/if}
+        {if !empty($WIDGETS)}
+          {foreach from=$WIDGETS item=widget}
+            {$widget}
+            <br />
+          {/foreach}
+         {/if}
       </div>
     {/if}
   </div>
