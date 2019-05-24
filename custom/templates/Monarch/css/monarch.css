@@ -34,6 +34,15 @@ body.pushable > .pusher {
 	background-position: center;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+font-family: "BasierSquareRegular",
+sans-serif;
+}
+
 .ui.container.intro {margin-top:20px !important;}
 
 
@@ -41,7 +50,6 @@ body.pushable > .pusher {
 
 .ui.header {
 	font-family: 'PxGroteskRegular';
-	text-transform: uppercase;
 }
 
 .ui.secondary.menu .toc.item {
@@ -241,6 +249,15 @@ body.pushable > .pusher {
 #forum-node .ui.grid .row {
 	padding-left: 20px;
 }
+#normal-threads {
+	-webkit-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+	border: 0px;
+}
+#normal-threads thead th {
+	border: 0px;
+}
+
 .floated .primary.button {
 	text-align: center;
 	background: #fff;
