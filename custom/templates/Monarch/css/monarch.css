@@ -597,13 +597,13 @@ sans-serif;
 	width: 48px;
 	height: 48px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
 	.mobile-hide {
 		display: none;
 		visibility: hidden;
 	}
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
 	.desktop-hide {
 		display: none;
 		visibility: hidden;

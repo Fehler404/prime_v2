@@ -52,12 +52,25 @@
               </div>
             </div>
                 <div class="extra content">
-                  <a href="{$item.author_url}"><img class="ui avatar image" src="{$item.author_avatar}" alt="{$item.author_name}"></a> <a style="{$item.author_style}" href="{$item.author_url}" data-poload="{$USER_INFO_URL}{$item.author_id}">{$item.author_name}</a>
-                <div class="right floated author">
+                <div class="mobile-hide text-center">
+                <div class="floated author">
                   <a class="ui mini primary button" href="{$item.url}">
                     <i class="fas fa-arrow-right"></i> {$READ_FULL_POST}
                   </a>
-            </div>
+                </div>
+                  <a href="{$item.author_url}" style="margin-top:15px;"><img class="ui avatar image" src="{$item.author_avatar}" alt="{$item.author_name}"></a>
+                  <a style="{$item.author_style}" href="{$item.author_url}" data-poload="{$USER_INFO_URL}{$item.author_id}">{$item.author_name}</a>
+                </div>
+                <span class="desktop-hide">
+                  <a href="{$item.author_url}"><img class="ui avatar image" src="{$item.author_avatar}" alt="{$item.author_name}"></a>
+                  <a style="{$item.author_style}" href="{$item.author_url}" data-poload="{$USER_INFO_URL}{$item.author_id}">{$item.author_name}</a>
+
+                  <div class="right floated author">
+                  <a class="ui mini primary button" href="{$item.url}">
+                    <i class="fas fa-arrow-right"></i> {$READ_FULL_POST}
+                  </a>
+                </div>
+                </span> 
           </div>
           </div>
         {/foreach}
