@@ -11,7 +11,9 @@ $language = array(
 
 	'monarch_title' => 'Monarch',
 
+	'theme' => "Theme",
 	'monarch' => 'Monarch',
+	'red' => "Red",
 	'darkred' => 'Dark Red',
 	'somewhatorange' => 'Somewhat Orange',
 	'aqua' => 'Aqua',
@@ -26,7 +28,17 @@ $language = array(
 	'purple' => 'Purple',
 	'gray' => 'Gray',
 	'black' => 'Black',
-	
+
+	'header_background' => 'Header background image',
+	'header_background_placeholder' => 'https://yourdomain.com/bg.jpg',
+
+	'header_background_position' => 'Position of the Header Image',
+	'header_background_position_placeholder' => 'top, center, bottom',
+
+	'bg' => 'bg',
+	'logo' => 'Logo',
+	'bgposition' => 'bg position',
+	'logo_placeholder' => 'https://yourdomain.com/logo.jpg',
 	'unable_to_write_to_settings' => 'Unable to write to <strong>modules/Monarch/pages/settings.php</strong>. Please check file permissions.',
 	'successfully_updated' => 'Successfully updated.',
 );
