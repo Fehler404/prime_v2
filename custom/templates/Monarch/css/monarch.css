@@ -9,15 +9,27 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800|Oxygen');
 
+@font-face {
+	font-family: 'PxGroteskRegular';
+	src:
+		url('/custom/templates/Monarch/webfonts/Px-Grotesk-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'BasierSquareRegular';
+	src:
+	url("Basier-Square-Regular.otf") format("opentype");
+}
 
 /* ======= Masthead ======= */
 
 body {
-	font-family: "Montserrat",sans-serif;
+	font-family: "BasierSquareRegular",
+	sans-serif;
 }
 a {
     font-weight: 600;
-    font-family: "Montserrat",sans-serif;
+    font-family: "BasierSquareRegular",
+    sans-serif;
 }
 body.pushable > .pusher {
 	background-position: center;
@@ -27,6 +39,11 @@ body.pushable > .pusher {
 
 
 /* =======[ NAVIGATION BAR]=======*/
+
+.ui.header {
+	font-family: 'PxGroteskRegular';
+	text-transform: uppercase;
+}
 
 .ui.secondary.menu .toc.item {
 	display: none;
@@ -70,7 +87,8 @@ body.pushable > .pusher {
 }
 .ui.secondary.menu .item {
 	color: #fff;
-	font-family: "Montserrat",sans-serif;
+	font-family: "PxGroteskRegular",
+	sans-serif;
 	font-weight: 600;
 	font-size: 1.025rem;
 	letter-spacing: -0.04em;
@@ -216,7 +234,8 @@ body.pushable > .pusher {
     text-decoration: none;
     background-color: transparent;
     font-weight: 500;
-    font-family: "Montserrat",sans-serif;
+    font-family: "BasierSquareRegular",
+    sans-serif;
     font-size: 16px;
 }
 #forum-node .ui.grid .row {
@@ -412,9 +431,7 @@ body.pushable > .pusher {
 
 /* ======= Contact Section ======= */
 .contact-section {
-  background: #297ba1;
   color: #fff;
-	margin-top: 35px;
 }
 .contact-section a {
   color: #fff;
@@ -494,6 +511,16 @@ body.pushable > .pusher {
     margin: 0;
     padding: 0;
 }
+.pre-footer {
+	background:#f3f3f3;
+	padding-top: 20px;
+	padding-bottom: 40px;
+	margin-top: 9rem;
+}
+.pre-footer h3 {
+	font-family: 'PxGroteskRegular';
+}
+
 
 .modal-backdrop {
     z-index: 0 !important;
