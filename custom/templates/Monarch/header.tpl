@@ -27,9 +27,6 @@
     {foreach from=$TEMPLATE_CSS item=css}
       {$css}
     {/foreach}
-
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-
   </head>
 
   <body id="page-{if is_numeric($smarty.const.PAGE)}{$TITLE}{else}{$smarty.const.PAGE}{/if}">

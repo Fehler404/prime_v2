@@ -6,7 +6,6 @@
 
 */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800|Oxygen');
 
 @font-face {
@@ -89,8 +88,8 @@ body.pushable > .pusher {
 	color: #fff;
 	font-family: "PxGroteskRegular",
 	sans-serif;
+	font-size: 16px;
 	font-weight: 600;
-	font-size: 1.025rem;
 	letter-spacing: -0.04em;
 }
 .ui.secondary.menu .item:hover {
@@ -101,7 +100,8 @@ body.pushable > .pusher {
     box-shadow: none;
     background: #fff;
     color: #000;
-    border-radius: .5px;
+		border-radius: .5px;
+		font-size: 16px;
 }
 .ui.secondary.menu .active.item:hover {
     -webkit-box-shadow: none;
