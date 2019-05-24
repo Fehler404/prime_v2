@@ -1,5 +1,5 @@
 
-  <div class="ui masthead pusher" {if isset($MONARCH_BG)} style="background-image:url('{$MONARCH_BG}');background-position:{$MONARCH_BG_POSITION};background-color:#000;"{/if}>
+  <div class="ui masthead pusher" {if isset($MONARCH_BG)} style="background-image:url('{$MONARCH_BG}');background-position:{$MONARCH_BG_POSITION};background-size:cover;background-color:#000;"{/if}>
     <div class="ui container">
     <div class="ui stackable grid">
       <div class="ui middle aligned row">

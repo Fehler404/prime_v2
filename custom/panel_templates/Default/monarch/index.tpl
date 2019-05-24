@@ -78,14 +78,13 @@
                                 <div class="col-md-4">	
 									<label for='Theme'>{$NAV_THEME}</label>
 									<select id="Theme" class='form-control' name='theme'>
-										<option value='red'{if $NAV_THEME_VALUE eq 'red'} selected{/if}>{$RED}</option>
+										<option value='#e25d64'{if $NAV_THEME_VALUE eq 'red'} selected{/if}>{$RED}</option>
                                         <option value='#297ba1'{if $NAV_THEME_VALUE eq 'monarch'} selected{/if}>{$MONARCH}</option>
-										<option value='blue'{if $NAV_THEME_VALUE eq 'blue'} selected{/if}>{$BLUE}</option>
 										<option value='darkgreen'{if $NAV_THEME_VALUE eq 'darkgreen'} selected{/if}>{$DARKGREEN}</option>
 										<option value='gold'{if $NAV_THEME_VALUE eq 'gold'} selected{/if}>Clearly Yellow</option>
-                                        <option value='#ff5240'{if $NAV_THEME_VALUE eq 'somewhatorange'} selected{/if}>Somewhat Orange</option>
+                                        <option value='#f77b4e'{if $NAV_THEME_VALUE eq 'somewhatorange'} selected{/if}>Somewhat Orange</option>
                                         <option value='#f8b88b'{if $NAV_THEME_VALUE eq 'sandpaper'} selected{/if}>Sandpaper</option>
-										<option value='rgb(242, 183, 182)'{if $NAV_THEME_VALUE eq 'maybepink'} selected{/if}>Maybe Pink</option>
+										<option value='rgb(251, 158, 157)'{if $NAV_THEME_VALUE eq 'maybepink'} selected{/if}>Maybe Pink</option>
                                         <option value='#6000ff'{if $NAV_THEME_VALUE eq 'purple2'} selected{/if}>Purple</option>
 										<option value='black'{if $NAV_THEME_VALUE eq 'black'} selected{/if}>Just Black</option>
 									</select>
