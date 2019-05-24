@@ -163,6 +163,17 @@ sans-serif;
 .ui.popup>.header:focus {
 	font-family: "PxGroteskRegular";
 }
+.ui.card img.avatar {
+	border-radius: 5px;
+}
+.ui.avatar.image {
+	border-radius: 5px;
+	width: 3em;
+	height: 3em;
+}
+.ui.primary.button {
+	background: #000;
+}
 
 .masthead.pusher h1 {
 	font-family: "Montserrat",sans-serif;
@@ -170,6 +181,9 @@ sans-serif;
 }
 .masthead.pusher a:hover {
 	text-decoration: none;
+}
+.ui.menu {
+	border-radius: 0px;
 }
 
 /*
@@ -324,7 +338,7 @@ sans-serif;
 }
 .ui.form input:not([type]), .ui.form input[type="date"], .ui.form input[type="datetime-local"], .ui.form input[type="email"], .ui.form input[type="file"], .ui.form input[type="number"], .ui.form input[type="password"], .ui.form input[type="search"], .ui.form input[type="tel"], .ui.form input[type="text"], .ui.form input[type="time"], .ui.form input[type="url"] {
 	border: 0px;
-	border-bottom: 2px solid #1113;
+	border-bottom: 2px solid #333;
 	border-radius: 0px;
 }
 .ui.card > .extra a {

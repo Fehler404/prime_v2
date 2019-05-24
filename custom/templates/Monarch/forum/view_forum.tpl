@@ -54,7 +54,7 @@
                 <td>
                   {if !empty($subforum.latest_post)}
                     <h5 class="ui header">
-                      <img class="ui mini circular image" src="{$subforum.latest_post.last_user_avatar}">
+                      <img class="ui mini image" src="{$subforum.latest_post.last_user_avatar}">
                       <div class="content">
                         <a href="{$subforum.latest_post.link}" data-toggle="popup">{$subforum.latest_post.title}</a>
                         <div class="ui wide popup">
@@ -111,7 +111,7 @@
                 </td>
                 <td>
                   <h5 class="ui image header">
-                    <img class="ui mini circular image" src="{$discussion.last_reply_avatar}">
+                    <img class="ui mini image" src="{$discussion.last_reply_avatar}">
                     <div class="content">
                       <a href="{$discussion.last_reply_link}" data-toggle="popup" data-poload="{$USER_INFO_URL}{$discussion.last_reply_user_id}" style="{$discussion.last_reply_style}">{$discussion.last_reply_username}</a>
                       <div class="sub header" data-toggle="tooltip" data-content="{$discussion.last_reply}">{$discussion.last_reply_rough}</div>
@@ -157,7 +157,7 @@
                 </td>
                 <td>
                   <h5 class="ui image header">
-                    <img class="ui mini circular image" src="{$discussion.last_reply_avatar}">
+                    <img class="ui mini image" src="{$discussion.last_reply_avatar}">
                     <div class="content">
                       <a href="{$discussion.last_reply_link}" data-toggle="popup" data-poload="{$USER_INFO_URL}{$discussion.last_reply_user_id}" style="{$discussion.last_reply_style}">{$discussion.last_reply_username}</a>
                       <div class="sub header" data-toggle="tooltip" data-content="{$discussion.last_reply}">{$discussion.last_reply_rough}</div>

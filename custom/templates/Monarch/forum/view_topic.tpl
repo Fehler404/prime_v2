@@ -98,7 +98,7 @@
         <div class="ui row">
           <div class="ui five wide tablet three wide computer column" id="post-sidebar">
             <center>
-              <img class="ui small circular image" src="{$reply.avatar}" alt="{$reply.username}" />
+              <img class="ui small image" src="{$reply.avatar}" alt="{$reply.username}" />
               <h3 class="ui header">
                 <a href="{$reply.profile}" style="{$reply.user_style}">{$reply.username}</a>
                 {if isset($reply.user_title)}
@@ -223,7 +223,7 @@
       <div class="ui row">
         <div class="ui five wide tablet three wide computer column" id="reply-sidebar">
           <center>
-            <img class="ui small circular image" src="{$LOGGED_IN_USER.avatar}"/>
+            <img class="ui small image" src="{$LOGGED_IN_USER.avatar}"/>
             <h3 class="ui header">
               <a href="{$LOGGED_IN_USER.profile}" style="{$LOGGED_IN_USER.username_style}">{$LOGGED_IN_USER.username}</a>
             </h3>
