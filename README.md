@@ -12,6 +12,11 @@ How to install:
 
 That's it.
 
+![Index](https://i.imgur.com/fnxblS5.png)
+![Forum](https://i.imgur.com/Bn7QUN8.png)
+![Profile](https://i.imgur.com/4tkjBAW.jpg)
+![Footer](https://i.imgur.com/P0HMcJh.png)
+
 ```
 custom/
 ├── page_templates/
