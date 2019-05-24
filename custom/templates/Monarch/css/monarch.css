@@ -124,6 +124,7 @@ sans-serif;
 }
 .ui.inverted.link.list .item {
 	color: #fff;
+	font-family: 'PxGroteskRegular';
 }
 .ui.segment {
 	border-radius: 0px;
