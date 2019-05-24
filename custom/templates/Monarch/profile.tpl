@@ -89,7 +89,9 @@
         <div class="sub header">{$USER_TITLE}</div>
       {/if}
     </h2>
-    {$GROUP}
+    {foreach from=$GROUPS item=group}
+	    {$group}
+	  {/foreach}
   </center>
     {/if}
   </div>
