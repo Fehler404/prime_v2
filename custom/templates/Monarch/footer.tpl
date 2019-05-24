@@ -2,14 +2,15 @@
 
   <div class="pre-footer">
     <div class="container">
+    <hr style="border:1px solid #000;">
       <div class="row">
         <div class="col-md-4" style="margin-top:20px">
-          <h3><i class="fas fa-question-circle"></i> About us</h3>
-          <p>AtlanticNetwork has been around since 2016. Our main goal is to provide the best experience for our players, we look forward to meeting you on the island our dear Castaway!</p>
+          <h3>To-DO</h3>
+          <p>To-DO</p>
         </div>
         
         <div class="col-md-4" style="margin-top:20px">
-          <h3><i class="fas fa-paper-plane"></i> Social</h3>
+          <h3>Social</h3>
           <ul class="list-inline social-media-list">
             {foreach from=$SOCIAL_MEDIA_ICONS item=icon}
             <li><a href="{$icon.link}" target="_blank">{$icon.text}</a></li>
@@ -18,9 +19,11 @@
         </div>
         
         <div class="col-md-4" style="margin-top:20px">
-          <h3><i class="fas fa-heart"></i> Support Us</h3>
-          <p>We always appreciate any purchases that are made on the server as it shows us that you are enjoying the content we are creating for you, it motivates us to work ever harder to provide a even better experience for you!</p>
-          <a class="footerShopButton" href="http://www.example.com/">Visit our Shop!</a>
+          <h3>Useful Links</h3>
+          <ul class="list-inline social-media-list">
+            <span class="item"><a href="{$TERMS_LINK}">{$TERMS_TEXT}</a></span><br>
+            <span class="item"><a href="{$PRIVACY_LINK}">{$PRIVACY_TEXT}</a></span>
+          </ul>
         </div>
       </div>
     </div>
@@ -37,8 +40,7 @@
         </div>
     <div class="col-md-4">
         <ul class="list-inline social-media-list">
-            <span class="item"><a href="{$TERMS_LINK}">{$TERMS_TEXT}</a></span><br>
-            <span class="item"><a href="{$PRIVACY_LINK}">{$PRIVACY_TEXT}</a></span>
+            
         </ul>
       </div>
 		<div class="col-md-4">
