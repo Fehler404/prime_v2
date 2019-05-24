@@ -60,10 +60,8 @@ class Monarch_Module extends Module {
 			$smarty->assign(array(
 				'MONARCH_COLOR' => $monarch_color,
 				'MONARCH_BG' => $monarch_bg,
-				'MONARCH_PAGE_BG' => $monarch_page_bg,
-				'MONARCH_CONTENT_BG' => $monarch_content_bg,
+				'MONARCH_BG_POSITION' => $monarch_bg_position,
 				'MONARCH_LOGO' => $monarch_logo,
-				'MONARCH_FAVICON' => $monarch_favicon_desc,
 			));
 
 		} else {
