@@ -73,7 +73,9 @@
                             <form class='form-group' method='post'>
 							<div class="tab-content" id="pills-tabContent">	
 							<br>
-								<div class="tab-pane fade show active" id="pills-header" role="tabpanel" aria-labelledby="pills-header-tab">	
+								<div class="tab-pane fade show active" id="pills-header" role="tabpanel" aria-labelledby="pills-header-tab">
+                                <div class="row">
+                                <div class="col-md-4">	
 									<label for='Theme'>{$NAV_THEME}</label>
 									<select id="Theme" class='form-control' name='theme'>
 										<option value='#297ba1'{if $NAV_THEME_VALUE eq 'monarch'} selected{/if}>{$MONARCH}</option>
@@ -96,8 +98,17 @@
 										<option value='gray'{if $NAV_THEME_VALUE eq 'gray'} selected{/if}>{$GRAY}</option>
 										<option value='black'{if $NAV_THEME_VALUE eq 'black'} selected{/if}>{$BLACK}</option>
 									</select>
-									<br>
-								</div>	
+                                </div>
+                                <div class="col-md-4">
+									<label for='bg'>{$HEADER_BG}</label>
+									<input type='text' name='bg' value='{$HEADER_BG_VALUE}' class='form-control' placeholder="{$HEADER_BG_PLACEHOLDER}">
+                                </div>
+                                <div class="col-md-4">
+									<label for='logo'>{$LOGO}</label>
+									<input type='text' name='logo' value='{$LOGO_VALUE}' class='form-control' placeholder='{$LOGO_PLACEHOLDER}'>
+                                </div>
+								</div>
+                                </div>
                             </div>
 								<input type='hidden' name='view' value='update'>
                                 <input type="hidden" name="token" value="{$TOKEN}">

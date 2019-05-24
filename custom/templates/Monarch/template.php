@@ -28,7 +28,7 @@ class Monarch_Template extends TemplateBase {
 		$this->addCSSFiles(array(
 			$template['path'] . 'css/semantic.min.css' => array(),
 			$template['path'] . 'css/toastr.min.css' => array(),
-			'https://use.fontawesome.com/releases/v5.7.2/css/all.css' => array('integrity' => 'sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr', 'crossorigin' => 'anonymous')
+			'https://use.fontawesome.com/releases/v5.7.2/css/all.css' => array('integrity' => 'sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr', 'crossorigin' => 'anonymous'),
 		));
 
 		$this->addJSFiles(array(

@@ -1,10 +1,10 @@
 
-  <div class="ui masthead pusher" {if isset($BANNER_IMAGE)} style="background-image:url('{$BANNER_IMAGE}')"{/if}>
+  <div class="ui masthead pusher" {if isset($MONARCH_BG)} style="background-image:url('{$MONARCH_BG}');background-position:{$MONARCH_BG_POSITION};"{/if}>
     <div class="ui container">
     <div class="ui stackable grid">
       <div class="ui middle aligned row">
         <div class="eight wide column">
-          <a href="{$SITE_HOME}"><h1 style="color:#fff;">{$SITE_NAME}</h1></a>
+          <a href="{$SITE_HOME}"><img class="logo animated pulse infinite img-fluid" src="{$MONARCH_LOGO}" alt="{$SITE_NAME}"></a>
         </div>
         <div class="eight wide column">
           {if isset($MINECRAFT)}
@@ -19,13 +19,15 @@
 		        {else}
 		          <h4 class="ui header">{$SERVER_OFFLINE}</h4>
 		        {/if}
+            {else}
+		          <h4 class="ui header" style="color:darkred;text-transform:uppercase;">{$SERVER_OFFLINE}</h4>
 		      {/if}
 		      {if isset($CLICK_TO_COPY_TOOLTIP)}
 		        <h4 class="ui header">
 		          <span onclick="copy('#ip')" data-tooltip="{$CLICK_TO_COPY_TOOLTIP}" data-variation="mini" data-inverted="" data-position="bottom center">{$CONNECT_WITH}</span>
 		        </h4>
 		      {/if}
-            </div>
+        </div>
 	      {/if}
         </div>
       </div>

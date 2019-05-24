@@ -87,8 +87,12 @@ sans-serif;
 
 .ui.secondary.menu .ui.popup a:not([href]) {
 	cursor: default !important;
+	font-family: "BasierSquareRegular",sans-serif;
 }
-
+.ui.menu .ui.list>.item:last-child {
+	font-family: "BasierSquareRegular",
+	sans-serif;
+}
 .ui.secondary.menu {
 	padding: 20px;
 }
@@ -134,7 +138,6 @@ sans-serif;
 
 .ui.menu .ui.list .item {
 	color: #777;
-	font-family: "Montserrat",sans-serif;
 }
 
 .ui.menu .ui.list .item:hover {
@@ -148,8 +151,17 @@ sans-serif;
 }
 .ui.breadcrumb a {color: #999;}
 .ui.card > .content > .header {
-	font-family: "Montserrat",sans-serif;
 	font-weight: 600;
+}
+
+.ui.popup>.header {
+	font-family: "PxGroteskRegular";
+}
+.ui.popup>.header:hover {
+	font-family: "PxGroteskRegular";
+}
+.ui.popup>.header:focus {
+	font-family: "PxGroteskRegular";
 }
 
 .masthead.pusher h1 {
@@ -312,7 +324,7 @@ sans-serif;
 	border-radius: 0px;
 }
 .ui.card > .extra a {
-	font-family: "Montserrat",sans-serif;
+	font-family: "PxGroteskRegular";
 }
 .ui.padded.segment {
 	-webkit-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
@@ -323,7 +335,7 @@ sans-serif;
 	background:transparent;
 	color:#fff;
 	text-transform: uppercase;
-	font-family: "Montserrat",sans-serif;
+	font-family: "PxGroteskRegular";
 }
 #navbar .ui.button:hover {background:#fff;color:#111;border-radius: 0px;}
 #navbar .ui.image.label {background:#fff;}
@@ -331,13 +343,13 @@ sans-serif;
 #news-post .header {padding:10px 10px;text-align: left;}
 
 #news-post .content .header a {
-	font-family: "Montserrat",sans-serif;
+	font-family: "PxGroteskRegular";
 	color: #000;
 	font-size: 1.4rem;
 	font-weight: 600;
 }
 #news-post .content .header .meta a {
-	font-family: "Montserrat",sans-serif;
+	font-family: "PxGroteskRegular";
 	color: #999;
 	font-size: 1rem;
 	font-weight: 600;
@@ -351,7 +363,7 @@ sans-serif;
 	margin: 0 auto 20px auto;
 	box-shadow: 0px;
 	display: inline-block;
-	font-family: "Montserrat",sans-serif;
+	font-family: "PxGroteskRegular";
 }
 #news-post .ui.primary.button:hover {
 	text-align: center;
@@ -365,7 +377,6 @@ sans-serif;
 #news-post .mini {
   line-height: 1.28;
   font-size: .90rem;
-  font-family: "Oxygen", sans-serif;
   font-weight: bold;
   color: #ffffff;
   text-shadow: 0 1px 0 rgba(0,0,0,0);
@@ -375,7 +386,7 @@ sans-serif;
 #news-post .extra {padding: 10px 30px;}
 .top-text h2 {
 	text-transform: uppercase;
-	font-family: "Montserrat",sans-serif;
+	font-family: "PxGroteskRegular";
 	font-weight: 600;
 	font-size: 25px;
 	margin-top: 25px;
@@ -389,7 +400,7 @@ sans-serif;
 .pushable > .pusher {min-height: 0;}
 
 .ui.sidebar.menu .item {
-	font-family: "Montserrat",sans-serif;
+	font-family: "PxGroteskRegular";
 	text-transform: uppercase;
 	font-weight: 600;
 }
