@@ -1,15 +1,11 @@
   </div></div>
 
-  <div class="pre-footer">
+  <div class="pre-footer text-center">
     <div class="container">
     <hr style="border:1px solid #000;">
       <div class="row">
-        <div class="col-md-4" style="margin-top:20px">
-          <h3>To-DO</h3>
-          <p>To-DO</p>
-        </div>
         
-        <div class="col-md-4" style="margin-top:20px">
+        <div class="col-md-6" style="margin-top:20px">
           <h3>Social</h3>
           <ul class="list-inline social-media-list">
             {foreach from=$SOCIAL_MEDIA_ICONS item=icon}
@@ -18,7 +14,7 @@
           </ul>
         </div>
         
-        <div class="col-md-4" style="margin-top:20px">
+        <div class="col-md-6" style="margin-top:20px">
           <h3>Useful Links</h3>
           <ul class="list-inline social-media-list">
             <span class="item"><a href="{$TERMS_LINK}">{$TERMS_TEXT}</a></span><br>
@@ -32,18 +28,13 @@
   <div id="contact" class="contact-section section text-center" style="background:{$MONARCH_COLOR}">
     <div class="container">
 		<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-6">
           <div class="ui inverted link list">
             <span class="item">&copy; {'Y'|date} {$SITE_NAME}. All Rights Reserved</span>
             <span class="item">Forum software by <a href="https://namelessmc.com">© {'Y'|date} NamelessMC</a></span>
           </div>
         </div>
-    <div class="col-md-4">
-        <ul class="list-inline social-media-list">
-            
-        </ul>
-      </div>
-		<div class="col-md-4">
+		<div class="col-md-6">
           <div class="ui inverted link list">
             <span class="item">Designed By:<br><a href="https://github.com/agenthighcastle">HighCastle</a></span>
           </div>
