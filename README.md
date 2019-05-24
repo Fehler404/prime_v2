@@ -17,6 +17,8 @@ That's it.
 ![Profile](https://i.imgur.com/4tkjBAW.jpg)
 ![Footer](https://i.imgur.com/P0HMcJh.png)
 
+* Images used are only for demonstration purposes and should be changed after installment.
+
 ```
 custom/
 ├── page_templates/
