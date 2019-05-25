@@ -130,7 +130,6 @@ $smarty->assign(array(
 	'PURPLE' => $monarch_language->get('language', 'purple'),
 	'GRAY' => $monarch_language->get('language', 'gray'),
 	'BLACK' => $monarch_language->get('language', 'black'),
-	'RAINBOW' => $monarch_language->get('language', 'rainbow'),
 ));
 
 $page_load = microtime(true) - $start;
