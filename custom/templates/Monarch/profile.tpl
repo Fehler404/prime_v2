@@ -100,7 +100,7 @@
 
   <div class="ui row profile-data">
     {if !empty($WIDGETS) || isset($FRIENDS)}
-      <div class="col-md-3 mobile-hide">
+      <div class="col-md-3 desktop-hide">
         {if isset($FRIENDS)}
           <div class="primaryContent avatarHeap card">
             <div class="card-header">
@@ -275,7 +275,7 @@
     </div>
 
     {if !empty($WIDGETS) || isset($FRIENDS)}
-      <div class="col-md-3 desktop-hide">
+      <div class="col-md-3 mobile-hide">
         {if isset($FRIENDS)}
           <div class="primaryContent avatarHeap card">
             <div class="card-header">
