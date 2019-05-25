@@ -12,10 +12,13 @@ How to install:
 
 ```
 custom/
-├── page_templates/
+├── panel_templates/
+│   ├── Default/
+│   │   ├── monarch/
 ├── templates/
 │   ├── Monarch/
 modules/
+│   ├── Monarch/
 ```
 
 That's it.
