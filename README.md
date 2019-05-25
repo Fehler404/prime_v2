@@ -10,6 +10,17 @@ How to install:
     Click the "Install" button.
     Find the Modules: Monarch, Friends and Members and activate them ALL.
 
+```
+custom/
+├── panel_templates/
+│   ├── Default/
+│   │   ├── monarch/
+├── templates/
+│   ├── Monarch/
+modules/
+│   ├── Monarch/
+```
+
 That's it.
 
 ![Index](https://i.imgur.com/fnxblS5.png)
@@ -19,10 +30,3 @@ That's it.
 
 * Images used are only for demonstration purposes and should be changed after installment.
 
-```
-custom/
-├── page_templates/
-├── templates/
-│   ├── Monarch/
-modules/
-```
