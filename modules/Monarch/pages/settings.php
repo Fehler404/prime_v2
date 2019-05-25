@@ -1,11 +1,11 @@
 <?php
 
 if(!defined('MONARCH_THEME'))
-	define('MONARCH_THEME', 'orange');
+	define('MONARCH_THEME', '#f77b4e');
 if(!defined('MONARCH_BG'))
-	define('MONARCH_BG', 'https://hypixel.net/styles/hypixel-uix/xenforo/header-bg.png');
+	define('MONARCH_BG', 'https://i.imgur.com/1Eq4L9z.png');
 if(!defined('MONARCH_BG_POSITION'))
-	define('MONARCH_BG_POSITION', 'center');
+	define('MONARCH_BG_POSITION', '');
 if(!defined('MONARCH_LOGO'))
-	define('MONARCH_LOGO', 'https://hypixel.net/styles/hypixel-uix/hypixel/logo.png');
+	define('MONARCH_LOGO', 'https://i.imgur.com/A4Cugxx.png');
 ?>
