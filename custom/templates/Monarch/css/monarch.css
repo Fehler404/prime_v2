@@ -414,7 +414,7 @@ sans-serif;
 	border: 2px solid #111;
 	margin-bottom: 35px;
 }
-.ui.menu:not(.vertical) .right.menu{display:-webkit-box;display:-ms-flexbox;display:flexbox;margin-left:auto!important}
+.ui.menu:not(.vertical) .right.menu{padding-top:4px;display:-webkit-box;display:-ms-flexbox;display:flexbox;margin-left:auto!important}
 .pushable > .pusher {min-height: 0;}
 
 .ui.sidebar.menu .item {
