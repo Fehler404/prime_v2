@@ -2,13 +2,14 @@
 
 How to install:
 
-    Upload to Main Directory.
+    Download > Unzip > Go into Monarch Folder.
+    Upload custom and modules folders to Main Directory.
     Login to Admin Panel.
     Go to Layout > Styles.
     Click the "Install" button > Find "Monarch", activate and make default.
     Next go to Modules.
     Click the "Install" button.
-    Find the Modules: Monarch, Friends and Members and activate them ALL.
+    Find the Modules: Monarch, Friends and Members > activate them ALL.
 
 ```
 custom/
