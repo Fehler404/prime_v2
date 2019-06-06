@@ -43,7 +43,7 @@ font-family: "BasierSquareRegular",
 sans-serif;
 }
 
-.ui.container.intro {margin-top:20px !important;}
+.ui.container.intro {background:#fff;padding:35px;margin-top:20px !important;}
 
 
 /* =======[ NAVIGATION BAR]=======*/
