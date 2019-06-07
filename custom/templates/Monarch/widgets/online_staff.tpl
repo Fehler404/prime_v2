@@ -5,7 +5,7 @@
       {if isset($ONLINE_STAFF_LIST)}
         {foreach from=$ONLINE_STAFF_LIST name=online_staff_arr item=user}
           <div class="ui relaxed list">
-            <div class="item">
+            <div class="col-md-4">
               <a href="{$user.profile}" data-poload="{$USER_INFO_URL}{$user.id}"><img class="ui mini image" src="{$user.avatar}" alt="{$user.username}"></a>
               <!--<div class="content">
                 <a class="header" href="{$user.profile}" data-poload="{$USER_INFO_URL}{$user.id}" style="{$user.style|replace:';':''}!important;">{$user.nickname}</a>
