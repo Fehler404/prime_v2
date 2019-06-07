@@ -154,10 +154,13 @@ sans-serif;
 .ui.card > .content > .header {
 	font-weight: 600;
 }
-#news-post .ui.card .content img {
-	height: 100%;
-	width: 100%;
-}
+ @media only screen and (max-width: 750px) {
+	#news-post .ui.card .content img {
+		height: 100%;
+		width: 100%;
+	}
+ }
+
 
 .ui.popup>.header {
 	font-family: "PxGroteskRegular";
