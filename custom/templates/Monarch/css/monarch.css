@@ -96,6 +96,22 @@ sans-serif;
 .ui.secondary.menu {
 	padding: 20px;
 }
+.members .ui.secondary.menu .item {
+	color: #111;
+	font-family: "PxGroteskRegular",
+		sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: -0.04em;
+}
+.members .ui.secondary.menu .item:hover {
+	color: #111 !important;
+	font-family: "PxGroteskRegular",
+		sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: -0.04em;
+}
 .ui.secondary.menu .item {
 	color: #fff;
 	font-family: "PxGroteskRegular",

@@ -1,6 +1,7 @@
 {include file='header.tpl'}
 {include file='navbar.tpl'}
 
+<div class="members">
 <h2 class="ui header">{$MEMBERS_TITLE}</h2>
 
 <div class="ui stackable grid">
@@ -50,5 +51,5 @@
 	
   </div>
 </div>
-
+</div>
 {include file='footer.tpl'}
