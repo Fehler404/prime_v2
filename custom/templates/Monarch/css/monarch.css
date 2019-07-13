@@ -12,12 +12,12 @@
 @font-face {
 	font-family: 'PxGroteskRegular';
 	src:
-		url('/custom/templates/Monarch/webfonts/Px-Grotesk-Regular.ttf') format('truetype');
+		url('../../../../custom/templates/Monarch/webfonts/Px-Grotesk-Regular.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'BasierSquareRegular';
 	src:
-	url("Basier-Square-Regular.otf") format("opentype");
+	url("../../../../custom/templates/Monarch/webfonts/Basier-Square-Regular.otf") format("opentype");
 }
 
 /* ======= Masthead ======= */
