@@ -142,4 +142,3 @@
 	    <p>{$CURRENT_VERSION} &middot; {$NEW_VERSION} &middot; <a href="{$UPDATE_LINK}">{$UPDATE}</a></p>
       </div>
     {/if}
-</section>

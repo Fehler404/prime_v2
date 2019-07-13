@@ -358,23 +358,42 @@ sans-serif;
 	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 445px) {
 	#form-login .ui.primary.button {
-		padding: 15px 10px;
+		padding: 15px 8px;
 	}
 	#form-login .ui.negative.button {
-		padding: 15px 13px;
+		padding: 15px 8px;
 	}
 }
 #form-register .ui.primary.button {
-	background: #297ba1 !important;
-	padding: 15px 35px;
-	border-radius: 0px;
-}
+    text-align: center;
+    background: #000;
+    border: 2px #000 solid;
+    color: #fff;
+    margin: 0 auto 20px auto;
+    display: inline-block;
+    font-family: "PxGroteskRegular";
+    border-radius: 5px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    }
 .ui.positive.button {
-	background: #20ab41 !important;
+	background: #20ab41;
 	padding: 15px 35px;
-	border-radius: 0px;
+	text-align: center;
+	border: 2px #20ab41 solid;
+	color: #fff;
+	margin: 0 auto 20px auto;
+	display: inline-block;
+	font-family: "PxGroteskRegular";
+	border-radius: 5px;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0);
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0);
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 .ui.form input:not([type]), .ui.form input[type="date"], .ui.form input[type="datetime-local"], .ui.form input[type="email"], .ui.form input[type="file"], .ui.form input[type="number"], .ui.form input[type="password"], .ui.form input[type="search"], .ui.form input[type="tel"], .ui.form input[type="text"], .ui.form input[type="time"], .ui.form input[type="url"] {
 	border: 0px;
@@ -388,6 +407,10 @@ sans-serif;
 	-webkit-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
 	box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* 
+* AS YOU FIND ME - ØM-53 
+*/
 
 #navbar .ui.button {
 	background:transparent;

@@ -64,7 +64,7 @@
   {if isset($NEW_UPDATE) && ($NEW_UPDATE_URGENT != true)}
     <script src="{$TEMPLATE.path}/js/core/update.js"></script>
   {/if}
-
+</section>
 </body>
 
 </html>
