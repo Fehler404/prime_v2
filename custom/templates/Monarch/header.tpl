@@ -8,25 +8,35 @@
 <!DOCTYPE html>
 <html{$HTMLCLASS}{$HTMLLANG}{$HTMLRTL}>
   <head>
-
+    
     <meta charset="{$METACHARSET}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>{$TITLE} &bull; {$smarty.const.SITE_NAME}</title>
-
+  
     <meta name="author" content="{$smarty.const.SITE_NAME}">
     <meta name='description' content='{$PAGEDESCRIPTION}' />
     <meta name='keywords' content='{$PAGEKEYWORDS}' />
-
+  
     <meta property="og:title" content="{$TITLE} &bull; {$smarty.const.SITE_NAME}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{$OG_URL}" />
     <meta property="og:image" content="{$OG_IMAGE}" />
     <meta property='og:description' content='{$PAGEDESCRIPTION}' />
+  
+	  <!-- Twitter Card Properties -->
+    <meta name="twitter:title" content="{$TITLE} &bull; {$smarty.const.SITE_NAME}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="{$OG_IMAGE}" />
 
+     {if isset($PAGE_DESCRIPTION) && $PAGE_DESCRIPTION|count_characters > 0}
+         <meta name="twitter:description" content="{$PAGE_DESCRIPTION}" />
+    {/if}
+  
     {foreach from=$TEMPLATE_CSS item=css}
       {$css}
     {/foreach}
+  
   </head>
 
   <body id="page-{if is_numeric($smarty.const.PAGE)}{$TITLE}{else}{$smarty.const.PAGE}{/if}">
