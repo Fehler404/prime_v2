@@ -1,15 +1,14 @@
 {include file='header.tpl'}
 {include file='navbar.tpl'}
 
-<div class="members">
 <h2 class="ui header">{$MEMBERS_TITLE}</h2>
 
 <div class="ui stackable grid">
   <div class="ui row">
     <div class="ui {if count($WIDGETS)}ten wide tablet twelve wide computer{else}sixteen wide{/if} column">
-	
+	<div class="members">
 	  <div class="ui segment">
-		<div class="ui secondary  menu">
+		<div class="ui secondary menu">
 		  <a class="item" href="{$ALL_LINK}">
 			{$DISPLAY_ALL}
 		  </a>
@@ -19,7 +18,7 @@
 			</a>
 		  {/foreach}
 		</div>
-	
+		</div>
 		<table id="example" class="ui table dataTables-users" style="width:100%">
 		  <thead>
 			<tr>
@@ -51,5 +50,5 @@
 	
   </div>
 </div>
-</div>
+
 {include file='footer.tpl'}
