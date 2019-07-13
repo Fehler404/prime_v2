@@ -2,7 +2,8 @@
 
 /*
 
-    TEMPLATE: MONARCH
+	TEMPLATE: MONARCH
+	Version: 0.9
 
 */
 
@@ -43,7 +44,11 @@ font-family: "BasierSquareRegular",
 sans-serif;
 }
 
-.ui.container.intro {background:#fff;padding:35px;margin-top:20px !important;}
+.ui.container.intro {
+	background: #fff;
+	padding: 35px;
+	margin-top: 20px !important;
+}
 
 
 /* =======[ NAVIGATION BAR]=======*/
@@ -95,22 +100,6 @@ sans-serif;
 }
 .ui.secondary.menu {
 	padding: 20px;
-}
-.members .ui.secondary.menu .item {
-	color: #111;
-	font-family: "PxGroteskRegular",
-		sans-serif;
-	font-size: 16px;
-	font-weight: 600;
-	letter-spacing: -0.04em;
-}
-.members .ui.secondary.menu .item:hover {
-	color: #111 !important;
-	font-family: "PxGroteskRegular",
-		sans-serif;
-	font-size: 16px;
-	font-weight: 600;
-	letter-spacing: -0.04em;
 }
 .ui.secondary.menu .item {
 	color: #fff;
@@ -170,13 +159,6 @@ sans-serif;
 .ui.card > .content > .header {
 	font-weight: 600;
 }
- @media only screen and (max-width: 750px) {
-	#news-post .ui.card .content img {
-		height: 100%;
-		width: 100%;
-	}
- }
-
 
 .ui.popup>.header {
 	font-family: "PxGroteskRegular";
@@ -341,14 +323,40 @@ sans-serif;
 }
 
 #form-login .ui.primary.button {
-	background: #297ba1 !important;
-	padding: 12px 32px;
-	border-radius: 0px;
-}
+    text-align: center;
+    background: #000;
+    border: 2px #000 solid;
+    color: #fff;
+    margin: 0 auto 20px auto;
+    display: inline-block;
+    font-family: "PxGroteskRegular";
+	border-radius: 5px;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0);
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0);
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    }
 #form-login .ui.negative.button {
-	background: #db2828 !important;
-	padding: 12px 32px;
-	border-radius: 0px;
+	text-align: center;
+	background: #d01919;
+	border: 2px #d01919 solid;
+	color: #fff;
+	margin: 0 auto 20px auto;
+	display: inline-block;
+	font-family: "PxGroteskRegular";
+	border-radius: 5px;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0);
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0);
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+@media only screen and (max-width: 375px) {
+	#form-login .ui.primary.button {
+		padding: 15px 10px;
+	}
+	#form-login .ui.negative.button {
+		padding: 15px 13px;
+	}
 }
 #form-register .ui.primary.button {
 	background: #297ba1 !important;
