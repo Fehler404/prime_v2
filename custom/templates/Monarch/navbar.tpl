@@ -1,4 +1,4 @@
-
+  <section>
   <div class="ui masthead pusher" {if isset($MONARCH_BG)} style="background-image:url('{$MONARCH_BG}');background-position:{$MONARCH_BG_POSITION};background-size:cover;background-color:#000;"{/if}>
     <div class="ui container">
     <div class="ui stackable grid">
@@ -34,8 +34,9 @@
     </div>
     </div>
   </div>
+  </section>
 
-
+<section>
 <div class="ui vertical inverted sidebar menu left" id="toc" style="background:{$MONARCH_COLOR}">
   <div class="item"><h3>{$SITE_NAME}</h3></div>
   {foreach from=$NAV_LINKS key=name item=item}
@@ -86,7 +87,7 @@
           {foreach from=$USER_SECTION key=name item=item}
 		    {if isset($item.items)}
               {if ($name == "alerts") || ($name == "pms")}
-		        <a class="ui small default icon button" data-toggle="popup" data-position="bottom right" id="button-{$name}">{$item.icon}</a>
+		        <a class="ui small default icon button" data-toggle="popup" data-position="bottom center" id="button-{$name}">{$item.icon}</a>
 		        <div class="ui wide basic popup">
                   <h4 class="ui header">{$item.title}</h4>
                   <div class="ui relaxed link list" id="list-{$name}">
@@ -98,10 +99,10 @@
                   </div>
                 </div>
               {elseif ($name == "account")}
-		        <a class="ui medium image label" data-toggle="popup" data-position="bottom right" id="button-{$name}">
+		        <a class="ui medium image label" data-toggle="popup" data-position="bottom center" id="button-{$name}">
 		          <img src="{$LOGGED_IN_USER.avatar}" alt="{$LOGGED_IN_USER.username}"> {$LOGGED_IN_USER.username}
 		        </a>
-		        <div class="ui wide basic popup">
+		        <div class="ui wide basic popup bottom">
                   <h4 class="ui header">{$item.title}</h4>
                   <div class="ui relaxed link list" id="list-{$name}">
                     {foreach from=$item.items item=dropdown}
@@ -141,3 +142,4 @@
 	    <p>{$CURRENT_VERSION} &middot; {$NEW_VERSION} &middot; <a href="{$UPDATE_LINK}">{$UPDATE}</a></p>
       </div>
     {/if}
+</section>
