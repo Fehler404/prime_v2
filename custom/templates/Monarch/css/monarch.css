@@ -56,6 +56,23 @@ sans-serif;
 .ui.header {
 	font-family: 'PxGroteskRegular';
 }
+.members .ui.secondary.menu .item {
+	color: #111;
+	font-family: "PxGroteskRegular",
+		sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: -0.04em;
+}
+
+.members .ui.secondary.menu .item:hover {
+	color: #111 !important;
+	font-family: "PxGroteskRegular",
+		sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: -0.04em;
+}
 
 .ui.secondary.menu .toc.item {
 	display: none;
@@ -63,15 +80,6 @@ sans-serif;
 
 .ui.secondary.menu .toc.item i {
 	margin: 0;
-}
-
-.ui.secondary.menu .ui.medium.label {
-	padding: .68em 1em .5em .5em;
-}
-
-.ui.secondary.menu .ui.medium.label img {
-	font-size: 1.09rem;
-	margin: -.6em .5em -.6em -.5em;
 }
 
 @media only screen and (max-width: 768px) {
