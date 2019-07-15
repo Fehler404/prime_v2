@@ -57,7 +57,19 @@
 <div class="col-md-9" id="profile-header" style="background-image:url('{$BANNER}');background-size:cover;">
   <div class="actions centered">
     {if isset($LOGGED_IN)}
-      {if isset($SELF)}
+      
+      <center>
+    <h2 class="ui header profile-nickname">
+      <span{if $USERNAME_COLOUR != false} style="{$USERNAME_COLOUR}"{/if}>{$NICKNAME}</span>
+      {if isset($USER_TITLE)}
+        <div class="sub header">{$USER_TITLE}</div>
+      {/if}
+    </h2>
+    {foreach from=$GROUPS item=group}
+	    {$group}
+	  {/foreach}
+    <br><br>
+  {if isset($SELF)}
         <a class="ui tiny primary icon button" href="{$SETTINGS_LINK}"><i class="cogs icon"></i></a>
         <button type="button" class="ui tiny teal icon button" onclick="showBannerSelect()"><i class="picture icon"></i></button>
       {else}
@@ -82,16 +94,6 @@
           </form>
         {/if}
       {/if}
-      <center>
-    <h2 class="ui header profile-nickname">
-      <span{if $USERNAME_COLOUR != false} style="{$USERNAME_COLOUR}"{/if}>{$NICKNAME}</span>
-      {if isset($USER_TITLE)}
-        <div class="sub header">{$USER_TITLE}</div>
-      {/if}
-    </h2>
-    {foreach from=$GROUPS item=group}
-	    {$group}
-	  {/foreach}
   </center>
     {/if}
   </div>

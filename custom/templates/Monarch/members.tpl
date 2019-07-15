@@ -1,6 +1,6 @@
 {include file='header.tpl'}
 {include file='navbar.tpl'}
-
+<div class="members">
 <div class="container">
   {if !empty($WIDGETS)}
   <div class="row">
@@ -50,6 +50,7 @@
   </div>
   </div>
   {/if}
+</div>
 </div>
 
 {include file='footer.tpl'}

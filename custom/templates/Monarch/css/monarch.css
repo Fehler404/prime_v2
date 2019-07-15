@@ -649,6 +649,10 @@ sans-serif;
 .nav-tabs .nav-link {
 	font-family: "Montserrat",sans-serif;
 }
+.members .nav-tabs .nav-link {
+	color: #000;
+	font-family: 'PxGroteskRegular', Open-Sans, sans-serif;
+}
 .profile-data {
 	margin-top: 40px;
 }
@@ -659,6 +663,60 @@ sans-serif;
 	width: 48px;
 	height: 48px;
 }
+
+#page-profile .centered {
+	padding: 4em;
+}
+
+#page-profile .ui.default.button {
+	text-align: center;
+	background: #000;
+	border: 2px #000 solid;
+	color: #fff;
+	margin: 0 auto 20px auto;
+	display: inline-block;
+	font-family: "PxGroteskRegular";
+	border-radius: 5px;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0);
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0);
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+	padding: 10px 15px;
+}
+
+#page-profile .ui.negative.button {
+	text-align: center;
+	background: #d01919;
+	border: 2px #d01919 solid;
+	color: #fff;
+	margin: 0 auto 20px auto;
+	display: inline-block;
+	font-family: "PxGroteskRegular";
+	border-radius: 5px;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0);
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0);
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+	padding: 10px 15px;
+	}
+
+#page-profile .ui.positive.button {
+    background: #20ab41;
+    padding: 10px 15px;
+    text-align: center;
+    border: 2px #20ab41 solid;
+    color: #fff;
+    margin: 0 auto 20px auto;
+    display: inline-block;
+    font-family: "PxGroteskRegular";
+    border-radius: 5px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+
 @media only screen and (min-width: 768px) {
 	.mobile-hide {
 		display: none;
