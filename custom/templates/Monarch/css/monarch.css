@@ -471,6 +471,10 @@ sans-serif;
 	font-size: 25px;
 	margin-top: 25px;
 }
+#news-post .ui.card .content img {
+	height: 100%;
+	width: 100%;
+}
 .top-text hr {
 	width: 40px;
 	border: 2px solid #111;
